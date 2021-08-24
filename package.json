@@ -2,7 +2,9 @@
   "name": "zanza",
   "displayName": "Zanza",
   "description": "simple things I miss from vscode",
-  "version": "0.0.1",
+  "publisher": "szkrd",
+  "repository": "https://github.com/szkrd/zanza-vscode",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -163,6 +165,7 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
+    "build": "npx vsce package -o build",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
     "format": "prettier -w src",
@@ -179,6 +182,7 @@
     "prettier": "2.3.2",
     "ts-node": "10.2.1",
     "typescript": "^4.3.2",
+    "vsce": "1.96.1",
     "vscode-test": "^1.5.2"
   }
 }

@@ -8,3 +8,4 @@ playground/*.map
 !.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
+*.vsix
