@@ -1,0 +1,17 @@
+foo
+hello
+bar
+hello
+x
+y
+z
+hello
+z
+hello
+hello
+apple, orange, melon
+
+foo bar baz!
+fooBar
+foo_bar_baz
+FOO-BAR-BAZ

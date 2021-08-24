@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+out
+test/*.js
+test/*.map
+!test/dummy*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tasks.json
