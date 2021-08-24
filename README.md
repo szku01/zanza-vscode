@@ -19,8 +19,11 @@ Stuff vscode should have by default.
 
 Shortcuts are set for Windows only (so far) - or at least they are tested there.
 
-### Existing
+### Existing (redefined/added)
 
+- `alt+backspace` = Delete Lines (from: _ctrl+shift+k_)
+- `ctrl+alt+\` = Single Column Layout / Unsplit All
+- `shift+left` = Collapse Folders (in Explorer)
 - `ctrl+alt+/` = Toggle Block Comment (from: _alt+shift+a_)
 
 ### New
