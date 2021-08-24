@@ -166,7 +166,7 @@
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
     "format": "prettier -w src",
-    "test": "prettier -c src && eslint src test --ext ts"
+    "test": "prettier -c src && eslint src --ext ts"
   },
   "devDependencies": {
     "@types/glob": "^7.1.3",
