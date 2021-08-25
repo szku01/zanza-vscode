@@ -29,10 +29,13 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 ### New
 
 - `ctrl+c` = Copy to Buffer
-- `ctrl+shift+v 1` = Paste from Buffer [1]
-- `ctrl+shift+v 2` = Paste from Buffer [2]
-- `ctrl+shift+v 3` = Paste from Buffer [3]
-- `ctrl+shift+v 4` = Paste from Buffer [4]
-- `ctrl+shift+v 5` = Paste from Buffer [5]
+- `ctrl+shift+v <NUM>` = Paste from Buffer [<NUM>] (NUM:1-2-3-4-5)
 - `ctrl+shift+v`x2 = Show Clipboard Buffer
-- `ctrl+shift+/` Toggle Line Comment, Move Cursor Down
+- `ctrl+shift+/` = Toggle Line Comment, Move Cursor Down
+- `alt+shift+d <NUM>` = Save Bookmark [<NUM>] (NUM:1-2-3-4-5-6-7-8-9-0)
+- `alt+d <NUM>` = Load Bookmark [<NUM>]
+- `alt+d`x2 = Load Bookmark from List
+
+## TODO
+
+- [ ] generate package.json from json fragments

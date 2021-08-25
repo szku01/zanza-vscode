@@ -1,4 +1,5 @@
 import * as vscode from 'vscode';
+import { bookmarkInitExtension } from './bookmark';
 import { changeCaseInitExtension } from './changeCase';
 import { clipboardBufferInitExtension } from './clipboardBuffer';
 import { commentDownInitExtension } from './commentDown';
@@ -9,6 +10,7 @@ export function activate(context: vscode.ExtensionContext) {
   clipboardBufferInitExtension(context);
   changeCaseInitExtension(context);
   commentDownInitExtension(context);
+  bookmarkInitExtension(context);
 }
 
 export function deactivate() {}
