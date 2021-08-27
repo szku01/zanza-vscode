@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -47,10 +47,23 @@
     "onCommand:zanza.showClipboardBuffer",
     "onCommand:zanza.commentDown",
     "onCommand:zanza.greedyDeleteLeft",
+    "onCommand:zanza.startGitBash",
+    "onCommand:zanza.startTerminal",
     "onCommand:editor.action.deleteLines",
     "onCommand:workbench.action.editorLayoutSingle",
     "onCommand:workbench.files.action.collapseExplorerFolders",
-    "onCommand:editor.action.blockComment"
+    "onCommand:editor.action.blockComment",
+    "onCommand:workbench.action.terminal.focusPrevious",
+    "onCommand:workbench.action.terminal.focusNext",
+    "onCommand:explorer.newFile",
+    "onCommand:explorer.newFolder",
+    "onCommand:editor.emmet.action.wrapWithAbbreviation",
+    "onCommand:editor.action.joinLines",
+    "onCommand:workbench.action.closeOtherEditors",
+    "onCommand:workbench.action.toggleTabsVisibility",
+    "onCommand:workbench.action.toggleMaximizedPanel",
+    "onCommand:editor.action.insertSnippet",
+    "onCommand:typescript.restartTsServer"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -178,6 +191,14 @@
         "when": "editorTextFocus && !editorReadonly"
       },
       {
+        "command": "zanza.startGitBash",
+        "key": "ctrl+shift+f9"
+      },
+      {
+        "command": "zanza.startTerminal",
+        "key": "ctrl+f9"
+      },
+      {
         "command": "editor.action.deleteLines",
         "key": "alt+backspace",
         "when": "textInputFocus && !editorReadonly"
@@ -195,6 +216,55 @@
         "command": "editor.action.blockComment",
         "key": "ctrl+alt+/",
         "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "command": "workbench.action.terminal.focusPrevious",
+        "key": "ctrl+alt+left",
+        "when": "terminalFocus && terminalProcessSupported"
+      },
+      {
+        "command": "workbench.action.terminal.focusNext",
+        "key": "ctrl+alt+right",
+        "when": "terminalFocus && terminalProcessSupported"
+      },
+      {
+        "command": "explorer.newFile",
+        "key": "alt+insert"
+      },
+      {
+        "command": "explorer.newFolder",
+        "key": "shift+alt+insert"
+      },
+      {
+        "command": "editor.emmet.action.wrapWithAbbreviation",
+        "key": "shift+alt+t"
+      },
+      {
+        "command": "editor.action.joinLines",
+        "key": "ctrl+shift+j",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "workbench.action.closeOtherEditors",
+        "key": "ctrl+k shift+w"
+      },
+      {
+        "command": "workbench.action.toggleTabsVisibility",
+        "key": "ctrl+alt+t"
+      },
+      {
+        "command": "workbench.action.toggleMaximizedPanel",
+        "key": "ctrl+alt+up",
+        "when": "terminalFocus"
+      },
+      {
+        "command": "editor.action.insertSnippet",
+        "key": "shift+space",
+        "when": "editorTextFocus && !editorReadonly"
+      },
+      {
+        "command": "typescript.restartTsServer",
+        "key": "ctrl+shift+alt+r"
       }
     ],
     "commands": [
@@ -337,6 +407,14 @@
       {
         "command": "zanza.greedyDeleteLeft",
         "title": "Greedy Delete Left"
+      },
+      {
+        "command": "zanza.startGitBash",
+        "title": "Start Git Bash Here"
+      },
+      {
+        "command": "zanza.startTerminal",
+        "title": "Start Terminal Here"
       }
     ]
   },

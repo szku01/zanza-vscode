@@ -10,6 +10,7 @@ const parts = [
   require('./clipboardBuffer'),
   require('./commentDown'),
   require('./greedySelect'),
+  require('./startBash'),
   require('./generic'),
 ];
 

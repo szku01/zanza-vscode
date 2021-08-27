@@ -2,6 +2,8 @@
 
 Stuff vscode should have by default.
 
+No dependencies, no hacks, no wishlists, no magic.
+
 ## Development
 
 - `f5` run / launch another vscode for extension development mode
@@ -24,8 +26,17 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 
 - `alt+backspace` = Delete Lines (from: _ctrl+shift+k_)
 - `ctrl+alt+\` = Single Column Layout / Unsplit All
-- `shift+left` = Collapse Folders (in Explorer)
+- `shift+left` = Collapse Folders (in Explorer sidebar)
 - `ctrl+alt+/` = Toggle Block Comment (from: _alt+shift+a_)
+- `ctrl+alt+left` = Terminal Previous
+- `ctrl+alt+right` = Terminal Next
+- `alt+insert` = New File (Explorer Sidebar)
+- `shift+alt+insert`: New Folder (Explorer Sidebar)
+- `shift+alt+t` = Wrap with Abbreviation
+- `ctrl+shift+j` = Join Lines
+- `ctrl+k shift+w` = Close All Other Tabs
+- `ctrl+alt+t` = Toggle Tabbar Visibility
+- `ctrl+alt+up` = Maximize Terminal Panel (in Terminal Only)
 
 ### New
 
@@ -33,14 +44,22 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `ctrl+shift+v <NUM>` = Paste from Buffer [<NUM>] (NUM:1-2-3-4-5)
 - `ctrl+shift+v`x2 = Show Clipboard Buffer
 - `ctrl+shift+/` = Toggle Line Comment, Move Cursor Down
-- `alt+shift+d <NUM>` = Save Bookmark [<NUM>] (NUM:1-2-3-4-|-5-6-7-8);
-  the second half is persistent per workspace
+- `alt+shift+d <NUM>` = Save Bookmark [<NUM>] (NUM:1-2-3-4-|-5-6-7-8); 5-8 is persistent per workspace
 - `alt+d <NUM>` = Load Bookmark [<NUM>]
 - `alt+d`x2 = Load Bookmark from List
 - `alt+shift+d`x2 = Save Bookmark to List
 - `ctrl+shift+backspace`x2 = Greedy Backspace
+- `ctrl+f9`= Start Terminal (external)
+- `ctrl+shift+f9`= Start Git Bash (external)
+- `shift+space` = Insert Snippet from List (vscode auto complete can be very slow)
+- `ctrl+shift+alt+r` = Restart Ts Server (in case of "phantom" lsp errors)
 
 ## TODO
 
 - [x] generate package.json from json fragments
-- [ ] persist the bookmarks per workspace
+- [x] persist the bookmarks per workspace
+- [x] greedy backspace (see: jasonlhy.hungry-delete)
+- [ ] open file, name from clipboard (see: quickOpen.withPrefill)
+- [ ] jump to file from diff view
+- [ ] git blame
+- [ ] git diff file with branch
