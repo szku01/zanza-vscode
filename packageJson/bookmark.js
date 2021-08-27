@@ -80,28 +80,18 @@ module.exports = [
     title: 'Load Bookmark [8]',
   },
   {
-    key: 'alt+shift+d 9',
-    command: 'zanza.saveBookmark9',
-    title: 'Save Bookmark [9]',
-  },
-  {
-    key: 'alt+d 9',
-    command: 'zanza.loadBookmark9',
-    title: 'Load Bookmark [9]',
-  },
-  {
-    key: 'alt+shift+d 0',
-    command: 'zanza.saveBookmark0',
-    title: 'Save Bookmark [0]',
-  },
-  {
-    key: 'alt+d 0',
-    command: 'zanza.loadBookmark0',
-    title: 'Load Bookmark [0]',
-  },
-  {
     key: 'alt+d alt+d',
     command: 'zanza.loadBookmarkFromPicker',
     title: 'Load Bookmark',
+  },
+  {
+    key: 'alt+shift+d alt+shift+d',
+    command: 'zanza.saveBookmarkToPicker',
+    title: 'Save Bookmark',
+  },
+  {
+    key: 'alt+shift+d x',
+    command: 'zanza.flushBookmarks',
+    title: 'Flush Bookmarks',
   },
 ];

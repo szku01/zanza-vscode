@@ -28,11 +28,9 @@
     "onCommand:zanza.loadBookmark7",
     "onCommand:zanza.saveBookmark8",
     "onCommand:zanza.loadBookmark8",
-    "onCommand:zanza.saveBookmark9",
-    "onCommand:zanza.loadBookmark9",
-    "onCommand:zanza.saveBookmark0",
-    "onCommand:zanza.loadBookmark0",
     "onCommand:zanza.loadBookmarkFromPicker",
+    "onCommand:zanza.saveBookmarkToPicker",
+    "onCommand:zanza.flushBookmarks",
     "onCommand:zanza.transformToCamelCase",
     "onCommand:zanza.transformToCamelCase",
     "onCommand:zanza.transformToKebabCase",
@@ -121,66 +119,51 @@
         "key": "alt+d 8"
       },
       {
-        "command": "zanza.saveBookmark9",
-        "key": "alt+shift+d 9"
-      },
-      {
-        "command": "zanza.loadBookmark9",
-        "key": "alt+d 9"
-      },
-      {
-        "command": "zanza.saveBookmark0",
-        "key": "alt+shift+d 0"
-      },
-      {
-        "command": "zanza.loadBookmark0",
-        "key": "alt+d 0"
-      },
-      {
         "command": "zanza.loadBookmarkFromPicker",
         "key": "alt+d alt+d"
       },
       {
+        "command": "zanza.saveBookmarkToPicker",
+        "key": "alt+shift+d alt+shift+d"
+      },
+      {
+        "command": "zanza.flushBookmarks",
+        "key": "alt+shift+d x"
+      },
+      {
         "command": "zanza.copyToBuffer",
         "key": "ctrl+c",
-        "when": "editorFocus",
-        "mac": "cmd+c"
+        "when": "editorFocus"
       },
       {
         "command": "zanza.pasteFromBuffer1",
         "key": "ctrl+shift+v 1",
-        "when": "editorTextFocus && !editorReadonly",
-        "mac": "cmd+shift+v 1"
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "zanza.pasteFromBuffer2",
         "key": "ctrl+shift+v 2",
-        "when": "editorTextFocus && !editorReadonly",
-        "mac": "cmd+shift+v 2"
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "zanza.pasteFromBuffer3",
         "key": "ctrl+shift+v 3",
-        "when": "editorTextFocus && !editorReadonly",
-        "mac": "cmd+shift+v 3"
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "zanza.pasteFromBuffer4",
         "key": "ctrl+shift+v 4",
-        "when": "editorTextFocus && !editorReadonly",
-        "mac": "cmd+shift+v 4"
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "zanza.pasteFromBuffer5",
         "key": "ctrl+shift+v 5",
-        "when": "editorTextFocus && !editorReadonly",
-        "mac": "cmd+shift+v 5"
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "zanza.showClipboardBuffer",
         "key": "ctrl+shift+v ctrl+shift+v",
-        "when": "editorTextFocus && !editorReadonly",
-        "mac": "cmd+shift+v cmd+shift+v"
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "zanza.commentDown",
@@ -274,24 +257,16 @@
         "title": "Load Bookmark [8]"
       },
       {
-        "command": "zanza.saveBookmark9",
-        "title": "Save Bookmark [9]"
-      },
-      {
-        "command": "zanza.loadBookmark9",
-        "title": "Load Bookmark [9]"
-      },
-      {
-        "command": "zanza.saveBookmark0",
-        "title": "Save Bookmark [0]"
-      },
-      {
-        "command": "zanza.loadBookmark0",
-        "title": "Load Bookmark [0]"
-      },
-      {
         "command": "zanza.loadBookmarkFromPicker",
         "title": "Load Bookmark"
+      },
+      {
+        "command": "zanza.saveBookmarkToPicker",
+        "title": "Save Bookmark"
+      },
+      {
+        "command": "zanza.flushBookmarks",
+        "title": "Flush Bookmarks"
       },
       {
         "command": "zanza.transformToCamelCase",
