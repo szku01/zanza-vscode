@@ -38,4 +38,5 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 
 ## TODO
 
-- [ ] generate package.json from json fragments
+- [x] generate package.json from json fragments
+- [ ] persist the bookmarks per workspace

@@ -11,3 +11,6 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 playground
+packageJson
+package.json.old
+README.orig

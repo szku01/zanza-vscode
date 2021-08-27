@@ -9,3 +9,4 @@ playground/*.map
 !.vscode/settings.json
 !.vscode/tasks.json
 *.vsix
+package.json.old
