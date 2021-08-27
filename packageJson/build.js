@@ -5,11 +5,12 @@
 const fs = require('fs');
 const output = require('../package.json');
 const parts = [
-  require('./bookmark.js'),
-  require('./changeCase.js'),
-  require('./clipboardBuffer.js'),
-  require('./commentDown.js'),
-  require('./generic.js'),
+  require('./bookmark'),
+  require('./changeCase'),
+  require('./clipboardBuffer'),
+  require('./commentDown'),
+  require('./greedySelect'),
+  require('./generic'),
 ];
 
 const activationEvents = [

@@ -33,10 +33,12 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `ctrl+shift+v <NUM>` = Paste from Buffer [<NUM>] (NUM:1-2-3-4-5)
 - `ctrl+shift+v`x2 = Show Clipboard Buffer
 - `ctrl+shift+/` = Toggle Line Comment, Move Cursor Down
-- `alt+shift+d <NUM>` = Save Bookmark [<NUM>] (NUM:1-2-3-4-5-6-7-8)
+- `alt+shift+d <NUM>` = Save Bookmark [<NUM>] (NUM:1-2-3-4-|-5-6-7-8);
+  the second half is persistent per workspace
 - `alt+d <NUM>` = Load Bookmark [<NUM>]
 - `alt+d`x2 = Load Bookmark from List
 - `alt+shift+d`x2 = Save Bookmark to List
+- `ctrl+shift+backspace`x2 = Greedy Backspace
 
 ## TODO
 

@@ -46,6 +46,7 @@
     "onCommand:zanza.pasteFromBuffer5",
     "onCommand:zanza.showClipboardBuffer",
     "onCommand:zanza.commentDown",
+    "onCommand:zanza.greedyDeleteLeft",
     "onCommand:editor.action.deleteLines",
     "onCommand:workbench.action.editorLayoutSingle",
     "onCommand:workbench.files.action.collapseExplorerFolders",
@@ -170,6 +171,11 @@
         "key": "ctrl+shift+/",
         "when": "editorTextFocus && !editorReadonly",
         "mac": "cmd+shift+/"
+      },
+      {
+        "command": "zanza.greedyDeleteLeft",
+        "key": "ctrl+shift+backspace",
+        "when": "editorTextFocus && !editorReadonly"
       },
       {
         "command": "editor.action.deleteLines",
@@ -327,6 +333,10 @@
       {
         "command": "zanza.commentDown",
         "title": "Toggle Line Comment, Move Cursor Down"
+      },
+      {
+        "command": "zanza.greedyDeleteLeft",
+        "title": "Greedy Delete Left"
       }
     ]
   },
