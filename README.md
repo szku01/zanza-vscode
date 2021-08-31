@@ -41,6 +41,7 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 ### New
 
 - `ctrl+c` = Copy to Buffer
+- `ctrl+x` = Cut to Buffer
 - `ctrl+shift+v <NUM>` = Paste from Buffer [<NUM>] (NUM:1-2-3-4-5)
 - `ctrl+shift+v`x2 = Show Clipboard Buffer
 - `ctrl+shift+/` = Toggle Line Comment, Move Cursor Down
