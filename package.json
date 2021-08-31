@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -39,6 +39,7 @@
     "onCommand:zanza.transformToScreamingSnakeCase",
     "onCommand:zanza.transformToConstantCase",
     "onCommand:zanza.copyToBuffer",
+    "onCommand:zanza.cutToBuffer",
     "onCommand:zanza.pasteFromBuffer1",
     "onCommand:zanza.pasteFromBuffer2",
     "onCommand:zanza.pasteFromBuffer3",
@@ -148,6 +149,11 @@
         "command": "zanza.copyToBuffer",
         "key": "ctrl+c",
         "when": "editorFocus"
+      },
+      {
+        "command": "zanza.cutToBuffer",
+        "key": "ctrl+x",
+        "when": "editorFocus && !editorReadonly"
       },
       {
         "command": "zanza.pasteFromBuffer1",
@@ -375,6 +381,10 @@
       {
         "command": "zanza.copyToBuffer",
         "title": "Copy to Buffer"
+      },
+      {
+        "command": "zanza.cutToBuffer",
+        "title": "Cut to Buffer"
       },
       {
         "command": "zanza.pasteFromBuffer1",

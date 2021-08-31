@@ -13,16 +13,25 @@ function paste(s: string, textEditor: vscode.TextEditor, edit: vscode.TextEditor
   });
 }
 
-// ---
-
-// copies to the buffer ring with filo
-async function copyToBufferAuto() {
-  await vscode.commands.executeCommand('editor.action.clipboardCopyAction');
+async function addToBuffer() {
   const text = await clipboard.readText();
   buffer.unshift(text);
   if (buffer.length > CLIPBOARD_BUFFER_MAX) {
     buffer.pop();
   }
+}
+
+// ---
+
+// copies to the buffer ring with filo
+async function copyToBufferAuto() {
+  await vscode.commands.executeCommand('editor.action.clipboardCopyAction');
+  await addToBuffer();
+}
+
+async function cutToBufferAuto() {
+  await vscode.commands.executeCommand('editor.action.clipboardCutAction');
+  await addToBuffer();
 }
 
 // paste from given buffer
@@ -63,6 +72,7 @@ export function clipboardBufferInitExtension(context: vscode.ExtensionContext) {
   const addDisposable = getAddDisposable(context);
 
   addDisposable(vscode.commands.registerTextEditorCommand('zanza.copyToBuffer', () => copyToBufferAuto()));
+  addDisposable(vscode.commands.registerTextEditorCommand('zanza.cutToBuffer', () => cutToBufferAuto()));
 
   for (let i = 1; i < CLIPBOARD_BUFFER_MAX + 1; i++) {
     addDisposable(

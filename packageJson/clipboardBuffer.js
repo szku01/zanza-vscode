@@ -6,6 +6,12 @@ module.exports = [
     title: 'Copy to Buffer',
   },
   {
+    key: 'ctrl+x',
+    when: 'editorFocus && !editorReadonly',
+    command: 'zanza.cutToBuffer',
+    title: 'Cut to Buffer',
+  },
+  {
     key: 'ctrl+shift+v 1',
     when: 'editorTextFocus && !editorReadonly',
     command: 'zanza.pasteFromBuffer1',
