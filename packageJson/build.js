@@ -12,6 +12,7 @@ const parts = [
   require('./openSelection'),
   require('./greedySelect'),
   require('./startBash'),
+  require('./openFolderNewInstance'),
   require('./generic'),
 ];
 
@@ -34,9 +35,19 @@ const commands = [
   //   "title": "Copy to Buffer"
   // },
 ];
+const menus = {
+  // example:
+  //   "explorer/context": [
+  //     {
+  //         "command": "extension.scopeToHere",
+  //         "group": "navigation@98",
+  //         "when": "explorerResourceIsFolder"
+  //     }
+  // ],
+};
 
 parts.flat().forEach((part) => {
-  // activasion event
+  // activation event
   activationEvents.push(`onCommand:${part.command}`);
   // keybinding
   if (part.key) {
@@ -56,6 +67,17 @@ parts.flat().forEach((part) => {
   if (part.title) {
     commands.push({ command: part.command, title: part.title });
   }
+  // menu
+  if (part.menu) {
+    const group = (menus[part.menu] = menus[part.menu] ?? []);
+    group.push({ command: part.command, group: part.group, when: part.when });
+  }
+  // menu for the command palette
+  if (part.skipCommandPalette) {
+    const groupName = 'commandPalette';
+    const group = (menus[groupName] = menus[groupName] ?? []);
+    group.push({ command: part.command, when: 'never' });
+  }
 });
 
 const save = (name = '') => fs.writeFileSync(name, JSON.stringify(output, null, 2));
@@ -63,4 +85,5 @@ save('package.json.old');
 output.activationEvents = activationEvents;
 output.contributes.keybindings = keybindings;
 output.contributes.commands = commands;
+output.contributes.menus = menus;
 save('package.json');

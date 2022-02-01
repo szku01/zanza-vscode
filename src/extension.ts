@@ -6,6 +6,7 @@ import { openSelectionInitExtension } from './openSelection';
 import { commentDownInitExtension } from './commentDown';
 import { greedySelectInitExtension } from './greedySelect';
 import { startBashInitExtension } from './startBash';
+import { openFolderNewInstanceInitExtension } from './openFolderNewInstance';
 
 // will init lazily
 export function activate(context: vscode.ExtensionContext) {
@@ -17,6 +18,7 @@ export function activate(context: vscode.ExtensionContext) {
   bookmarkInitExtension(context);
   greedySelectInitExtension(context);
   startBashInitExtension(context);
+  openFolderNewInstanceInitExtension(context);
 }
 
 export function deactivate() {}

@@ -62,6 +62,7 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `ctrl+f9`= Start Terminal (external)
 - `ctrl+shift+f9`= Start Git Bash (external)
 - `ctrl+alt+p`= Quick Open Selection or Clipboard
+- `explorer context menu / folder`= Open Folder in New Instance
 
 ## TODO
 
@@ -69,5 +70,6 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - [x] persist the bookmarks per workspace
 - [x] greedy backspace (see: jasonlhy.hungry-delete)
 - [x] open file, name from clipboard or selection (see: quickOpen.withPrefill)
+- [x] open folder in new window (context menu)
 - [ ] jump to file from diff view and close the diff
 - [ ] save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
