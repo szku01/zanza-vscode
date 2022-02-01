@@ -5,7 +5,6 @@ const { clipboard } = vscode.env;
 
 async function openSelection(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit) {
   // let's try to use the selections (but if all of them are the same, then don't join them)
-  const editor = vscode.window.activeTextEditor;
   const selectedTexts = textEditor.selections.map((sel) => textEditor.document.getText(sel).trim());
   let text = selectedTexts.every((sel) => sel === selectedTexts[0]) ? selectedTexts[0] : selectedTexts.join('');
   // if we have no selection, then fall back to the clipboard

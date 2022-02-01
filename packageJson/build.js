@@ -13,6 +13,7 @@ const parts = [
   require('./greedySelect'),
   require('./startBash'),
   require('./openFolderNewInstance'),
+  require('./fromDiffToFile'),
   require('./generic'),
 ];
 

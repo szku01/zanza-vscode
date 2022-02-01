@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -53,6 +53,7 @@
     "onCommand:zanza.startTerminal",
     "onCommand:zanza.openFolderNewInstance",
     "onCommand:zanza.openFolderNewInstanceFromEditor",
+    "onCommand:zanza.fromDiffToFile",
     "onCommand:editor.action.deleteLines",
     "onCommand:workbench.action.editorLayoutSingle",
     "onCommand:workbench.files.action.collapseExplorerFolders",
@@ -211,6 +212,11 @@
       {
         "command": "zanza.startTerminal",
         "key": "ctrl+f9"
+      },
+      {
+        "command": "zanza.fromDiffToFile",
+        "key": "f4",
+        "when": "isInDiffEditor"
       },
       {
         "command": "editor.action.deleteLines",
@@ -445,6 +451,10 @@
       {
         "command": "zanza.openFolderNewInstanceFromEditor",
         "title": "Open Folder in New Instance"
+      },
+      {
+        "command": "zanza.fromDiffToFile",
+        "title": "Close Diff and Go to File"
       }
     ],
     "menus": {
