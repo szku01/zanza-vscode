@@ -9,6 +9,7 @@ const parts = [
   require('./changeCase'),
   require('./clipboardBuffer'),
   require('./commentDown'),
+  require('./openSelection'),
   require('./greedySelect'),
   require('./startBash'),
   require('./generic'),

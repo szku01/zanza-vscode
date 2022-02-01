@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -47,6 +47,7 @@
     "onCommand:zanza.pasteFromBuffer5",
     "onCommand:zanza.showClipboardBuffer",
     "onCommand:zanza.commentDown",
+    "onCommand:zanza.openSelection",
     "onCommand:zanza.greedyDeleteLeft",
     "onCommand:zanza.startGitBash",
     "onCommand:zanza.startTerminal",
@@ -190,6 +191,11 @@
         "key": "ctrl+shift+/",
         "when": "editorTextFocus && !editorReadonly",
         "mac": "cmd+shift+/"
+      },
+      {
+        "command": "zanza.openSelection",
+        "key": "ctrl+alt+p",
+        "when": "editorTextFocus"
       },
       {
         "command": "zanza.greedyDeleteLeft",
@@ -413,6 +419,10 @@
       {
         "command": "zanza.commentDown",
         "title": "Toggle Line Comment, Move Cursor Down"
+      },
+      {
+        "command": "zanza.openSelection",
+        "title": "Quick Open Selection or Clipboard"
       },
       {
         "command": "zanza.greedyDeleteLeft",

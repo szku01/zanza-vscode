@@ -9,6 +9,13 @@ No dependencies, no hacks, no wishlists, no magic.
 - `f5` run / launch another vscode for extension development mode
 - `ctrl+r` reload (in another window)
 
+Adding a new command:
+
+- add new command file in _src/_ and import it in _src/extension.ts_
+- add new command in _packageJson/_ AND _packageJson/build.js_
+- change `version` in _package.json_
+- `npm run build`
+
 ## Known Issues
 
 1. So far all text transforms are done via enumerating/modifying selections,
@@ -37,6 +44,8 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `ctrl+k shift+w` = Close All Other Tabs
 - `ctrl+alt+t` = Toggle Tabbar Visibility
 - `ctrl+alt+up` = Maximize Terminal Panel (in Terminal Only)
+- `shift+space` = Insert Snippet from List (vscode auto complete can be very slow)
+- `ctrl+shift+alt+r` = Restart Ts Server (in case of "phantom" lsp errors)
 
 ### New
 
@@ -52,15 +61,13 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `ctrl+shift+backspace`x2 = Greedy Backspace
 - `ctrl+f9`= Start Terminal (external)
 - `ctrl+shift+f9`= Start Git Bash (external)
-- `shift+space` = Insert Snippet from List (vscode auto complete can be very slow)
-- `ctrl+shift+alt+r` = Restart Ts Server (in case of "phantom" lsp errors)
+- `ctrl+alt+p`= Quick Open Selection or Clipboard
 
 ## TODO
 
 - [x] generate package.json from json fragments
 - [x] persist the bookmarks per workspace
 - [x] greedy backspace (see: jasonlhy.hungry-delete)
-- [ ] open file, name from clipboard (see: quickOpen.withPrefill)
-- [ ] jump to file from diff view
-- [ ] git blame
-- [ ] git diff file with branch
+- [x] open file, name from clipboard or selection (see: quickOpen.withPrefill)
+- [ ] jump to file from diff view and close the diff
+- [ ] save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
