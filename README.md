@@ -24,6 +24,8 @@ Adding a new command:
 3. Delete line and move to next line always places the comment to the beginning of the content,
    unlike webstorm, which tries to align it to the previous line's comment placement.
 4. Boomarks are static (if you remove or add a line, the value will NOT change).
+5. Peafowl colors are stored in .vscode workspace settings, vscode has no API
+   to store them in memory or outside the workspace specific _settings.json_.
 
 ## Keyboard shortcuts
 
@@ -52,18 +54,19 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `ctrl+c` = Copy to Buffer
 - `ctrl+x` = Cut to Buffer
 - `ctrl+shift+v <NUM>` = Paste from Buffer [<NUM>] (NUM:1-2-3-4-5)
-- `ctrl+shift+v`x2 = Show Clipboard Buffer
+- `ctrl+shift+v`×2 = Show Clipboard Buffer
 - `ctrl+shift+/` = Toggle Line Comment, Move Cursor Down
 - `alt+shift+d <NUM>` = Save Bookmark [<NUM>] (NUM:1-2-3-4-|-5-6-7-8); 5-8 is persistent per workspace
 - `alt+d <NUM>` = Load Bookmark [<NUM>]
-- `alt+d`x2 = Load Bookmark from List
-- `alt+shift+d`x2 = Save Bookmark to List
-- `ctrl+shift+backspace`x2 = Greedy Backspace
+- `alt+d`×2 = Load Bookmark from List
+- `alt+shift+d`×2 = Save Bookmark to List
+- `ctrl+shift+backspace`×2 = Greedy Backspace
 - `ctrl+f9`= Start Terminal (external)
 - `ctrl+shift+f9`= Start Git Bash (external)
 - `ctrl+alt+p`= Quick Open Selection or Clipboard
 - `f4`= Close Diff and Open Active File (in diff viewer)
 - `explorer context menu / folder`= Open Folder in New Instance
+- Color status and titlebar with `Peafowl Color: ...` commands (9 dark, 6 light)
 
 ## TODO
 

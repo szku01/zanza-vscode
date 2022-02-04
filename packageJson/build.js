@@ -15,6 +15,7 @@ const parts = [
   require('./openFolderNewInstance'),
   require('./fromDiffToFile'),
   require('./generic'),
+  require('./peafowlColor'),
 ];
 
 const activationEvents = [

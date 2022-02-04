@@ -1,0 +1,18 @@
+module.exports = [
+  { command: 'zanza.peafowlColorReset', title: 'Peafowl Color: Reset' },
+  { command: 'zanza.peafowlColorDimGray', title: 'Peafowl Color: Dim Gray (dark)' },
+  { command: 'zanza.peafowlColorTeal', title: 'Peafowl Color: Teal (dark)' },
+  { command: 'zanza.peafowlColorSienna', title: 'Peafowl Color: Sienna (dark)' },
+  { command: 'zanza.peafowlColorDarkRed', title: 'Peafowl Color: Dark Red (dark)' },
+  { command: 'zanza.peafowlColorDarkGreen', title: 'Peafowl Color: Dark Green (dark)' },
+  { command: 'zanza.peafowlColorDarkOliveGreen', title: 'Peafowl Color: Dark Olive Green (dark)' },
+  { command: 'zanza.peafowlColorDarkSlateBlue', title: 'Peafowl Color: Dark Slate Blue (dark)' },
+  { command: 'zanza.peafowlColorDarkMagenta', title: 'Peafowl Color: Dark Magenta (dark)' },
+  { command: 'zanza.peafowlColorMaroon', title: 'Peafowl Color: Maroon (dark)' },
+  { command: 'zanza.peafowlColorThistle', title: 'Peafowl Color: Thistle (light)' },
+  { command: 'zanza.peafowlColorSilver', title: 'Peafowl Color: Silver (light)' },
+  { command: 'zanza.peafowlColorLightGreen', title: 'Peafowl Color: Light Green (light)' },
+  { command: 'zanza.peafowlColorLightSkyBlue', title: 'Peafowl Color: Light Sky Blue (light)' },
+  { command: 'zanza.peafowlColorLightPink', title: 'Peafowl Color: Light Pink (light)' },
+  { command: 'zanza.peafowlColorCornsilk', title: 'Peafowl Color: Cornsilk (light)' },
+];

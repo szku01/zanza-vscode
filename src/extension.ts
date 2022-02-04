@@ -8,10 +8,11 @@ import { greedySelectInitExtension } from './greedySelect';
 import { startBashInitExtension } from './startBash';
 import { openFolderNewInstanceInitExtension } from './openFolderNewInstance';
 import { fromDiffToFileInitExtension } from './fromDiffToFile';
+import { peafowlColorInitExtension } from './peafowlColor';
 
 // will init lazily
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Zanza is now active!');
+  console.info('Zanza is now active!');
   clipboardBufferInitExtension(context);
   changeCaseInitExtension(context);
   commentDownInitExtension(context);
@@ -21,6 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
   startBashInitExtension(context);
   openFolderNewInstanceInitExtension(context);
   fromDiffToFileInitExtension(context);
+  peafowlColorInitExtension(context);
 }
 
 export function deactivate() {}

@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "1.1.1",
+  "version": "2.0.2",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -68,7 +68,23 @@
     "onCommand:workbench.action.toggleTabsVisibility",
     "onCommand:workbench.action.toggleMaximizedPanel",
     "onCommand:editor.action.insertSnippet",
-    "onCommand:typescript.restartTsServer"
+    "onCommand:typescript.restartTsServer",
+    "onCommand:zanza.peafowlColorReset",
+    "onCommand:zanza.peafowlColorDimGray",
+    "onCommand:zanza.peafowlColorTeal",
+    "onCommand:zanza.peafowlColorSienna",
+    "onCommand:zanza.peafowlColorDarkRed",
+    "onCommand:zanza.peafowlColorDarkGreen",
+    "onCommand:zanza.peafowlColorDarkOliveGreen",
+    "onCommand:zanza.peafowlColorDarkSlateBlue",
+    "onCommand:zanza.peafowlColorDarkMagenta",
+    "onCommand:zanza.peafowlColorMaroon",
+    "onCommand:zanza.peafowlColorThistle",
+    "onCommand:zanza.peafowlColorSilver",
+    "onCommand:zanza.peafowlColorLightGreen",
+    "onCommand:zanza.peafowlColorLightSkyBlue",
+    "onCommand:zanza.peafowlColorLightPink",
+    "onCommand:zanza.peafowlColorCornsilk"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -455,6 +471,70 @@
       {
         "command": "zanza.fromDiffToFile",
         "title": "Close Diff and Go to File"
+      },
+      {
+        "command": "zanza.peafowlColorReset",
+        "title": "Peafowl Color: Reset"
+      },
+      {
+        "command": "zanza.peafowlColorDimGray",
+        "title": "Peafowl Color: Dim Gray (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorTeal",
+        "title": "Peafowl Color: Teal (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorSienna",
+        "title": "Peafowl Color: Sienna (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorDarkRed",
+        "title": "Peafowl Color: Dark Red (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorDarkGreen",
+        "title": "Peafowl Color: Dark Green (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorDarkOliveGreen",
+        "title": "Peafowl Color: Dark Olive Green (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorDarkSlateBlue",
+        "title": "Peafowl Color: Dark Slate Blue (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorDarkMagenta",
+        "title": "Peafowl Color: Dark Magenta (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorMaroon",
+        "title": "Peafowl Color: Maroon (dark)"
+      },
+      {
+        "command": "zanza.peafowlColorThistle",
+        "title": "Peafowl Color: Thistle (light)"
+      },
+      {
+        "command": "zanza.peafowlColorSilver",
+        "title": "Peafowl Color: Silver (light)"
+      },
+      {
+        "command": "zanza.peafowlColorLightGreen",
+        "title": "Peafowl Color: Light Green (light)"
+      },
+      {
+        "command": "zanza.peafowlColorLightSkyBlue",
+        "title": "Peafowl Color: Light Sky Blue (light)"
+      },
+      {
+        "command": "zanza.peafowlColorLightPink",
+        "title": "Peafowl Color: Light Pink (light)"
+      },
+      {
+        "command": "zanza.peafowlColorCornsilk",
+        "title": "Peafowl Color: Cornsilk (light)"
       }
     ],
     "menus": {

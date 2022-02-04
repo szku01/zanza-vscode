@@ -52,7 +52,6 @@ async function clearBookmarks() {
 
 async function storeBookmarks() {
   if (!currentContext) return;
-  console.log(1, currentContext.storageUri);
   await currentContext.workspaceState.update(EXT_KEY, buffer);
 }
 
