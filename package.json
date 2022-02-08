@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "2.0.2",
+  "version": "3.0.1",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -88,6 +88,13 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "iconThemes": [
+      {
+        "id": "zanza",
+        "label": "Zanza (minimal modified)",
+        "path": "./icons/zanza-icon-theme.json"
+      }
+    ],
     "keybindings": [
       {
         "command": "zanza.saveBookmark1",
