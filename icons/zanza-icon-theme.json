@@ -54,6 +54,7 @@
     "gulp.js": "_file_dotfile_dark",
     "npmrc": "_file_dotfile_dark",
     "nxignore": "_file_dotfile_dark",
+    "vscodeignore": "_file_dotfile_dark",
     "prettierignore": "_file_dotfile_dark",
     "prettierrc": "_file_dotfile_dark",
     "stylelintrc.json": "_file_dotfile_dark",
