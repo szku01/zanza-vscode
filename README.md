@@ -76,4 +76,51 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - [x] open file, name from clipboard or selection (see: quickOpen.withPrefill)
 - [x] open folder in new window (context menu)
 - [x] jump to file from diff view and close the diff
+- [x] simple icon theme based on minimal
+- [ ] reformat comments
 - [ ] save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
+
+## Tips and tricks
+
+### Terminal colors and theme modifications
+
+Currently it's not possible to "inherit from" a theme, one can either clone/dump a full theme and modify
+that or one can define override colors in global (or workspace) settings. Here's an example on how to change
+the terminal's colors and [fine tune](https://code.visualstudio.com/docs/getstarted/themes#_customizing-a-color-theme)
+themes:
+
+```jsonc
+"workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground": "#ffffff70",
+    "editorIndentGuide.background": "#ffffff15",
+    // theme overrides
+    "[Solarized Dark]": {
+      "editor.background": "#001419"
+    },
+    "[Tomorrow Night Blue]": {
+      "editor.background": "#000d1e"
+    },
+    "[Default Dark+]": {
+      "editor.background": "#181818"
+    },
+    // terminal (tango colors)
+    "terminal.background": "#0d0d0d",
+    "terminal.foreground": "#d3d7cf",
+    "terminal.ansiBlack": "#000000",
+    "terminal.ansiBlue": "#3465a4",
+    "terminal.ansiBrightBlack": "#555753",
+    "terminal.ansiBrightBlue": "#729fcf",
+    "terminal.ansiBrightCyan": "#34e2e2",
+    "terminal.ansiBrightGreen": "#8ae234",
+    "terminal.ansiBrightMagenta": "#ad7fa8",
+    "terminal.ansiBrightRed": "#ef2929",
+    "terminal.ansiBrightWhite": "#eeeeec",
+    "terminal.ansiBrightYellow": "#fce94f",
+    "terminal.ansiCyan": "#06989a",
+    "terminal.ansiGreen": "#4e9a06",
+    "terminal.ansiMagenta": "#75507b",
+    "terminal.ansiRed": "#cc0000",
+    "terminal.ansiWhite": "#d3d7cf",
+    "terminal.ansiYellow": "#c4a000"
+  },
+```
