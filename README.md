@@ -77,6 +77,7 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - [x] open folder in new window (context menu)
 - [x] jump to file from diff view and close the diff
 - [x] simple icon theme based on minimal
+- [ ] fix peafowl theme saving if there's no local settings.json
 - [ ] reformat comments
 - [ ] save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
 
