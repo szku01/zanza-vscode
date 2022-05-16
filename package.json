@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -175,37 +175,44 @@
       {
         "command": "zanza.copyToBuffer",
         "key": "ctrl+c",
-        "when": "editorFocus"
+        "when": "editorFocus",
+        "mac": "cmd+c"
       },
       {
         "command": "zanza.cutToBuffer",
         "key": "ctrl+x",
-        "when": "editorFocus && !editorReadonly"
+        "when": "editorFocus && !editorReadonly",
+        "mac": "cmd+x"
       },
       {
         "command": "zanza.pasteFromBuffer1",
         "key": "ctrl+shift+v 1",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+shift+v 1"
       },
       {
         "command": "zanza.pasteFromBuffer2",
         "key": "ctrl+shift+v 2",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+shift+v 2"
       },
       {
         "command": "zanza.pasteFromBuffer3",
         "key": "ctrl+shift+v 3",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+shift+v 3"
       },
       {
         "command": "zanza.pasteFromBuffer4",
         "key": "ctrl+shift+v 4",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+shift+v 4"
       },
       {
         "command": "zanza.pasteFromBuffer5",
         "key": "ctrl+shift+v 5",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+shift+v 5"
       },
       {
         "command": "zanza.showClipboardBuffer",
@@ -216,7 +223,7 @@
         "command": "zanza.commentDown",
         "key": "ctrl+shift+/",
         "when": "editorTextFocus && !editorReadonly",
-        "mac": "cmd+shift+/"
+        "mac": "cmd+alt+/"
       },
       {
         "command": "zanza.openSelection",
@@ -226,7 +233,8 @@
       {
         "command": "zanza.greedyDeleteLeft",
         "key": "ctrl+shift+backspace",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly",
+        "mac": "cmd+shift+backspace"
       },
       {
         "command": "zanza.startGitBash",
@@ -263,12 +271,14 @@
       {
         "command": "workbench.action.terminal.focusPrevious",
         "key": "ctrl+alt+left",
-        "when": "terminalFocus && terminalProcessSupported"
+        "when": "terminalFocus && terminalProcessSupported",
+        "mac": "ctrl+shift+left"
       },
       {
         "command": "workbench.action.terminal.focusNext",
         "key": "ctrl+alt+right",
-        "when": "terminalFocus && terminalProcessSupported"
+        "when": "terminalFocus && terminalProcessSupported",
+        "mac": "ctrl+shift+right"
       },
       {
         "command": "explorer.newFile",
@@ -284,12 +294,13 @@
       },
       {
         "command": "editor.action.joinLines",
-        "key": "ctrl+shift+j",
+        "key": "cmd+shift+j",
         "when": "editorTextFocus"
       },
       {
         "command": "workbench.action.closeOtherEditors",
-        "key": "ctrl+k shift+w"
+        "key": "ctrl+k shift+w",
+        "mac": "cmd+k shift+w"
       },
       {
         "command": "workbench.action.toggleTabsVisibility",

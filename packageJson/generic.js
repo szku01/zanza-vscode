@@ -20,11 +20,13 @@ module.exports = [
   },
   {
     key: 'ctrl+alt+left',
+    mac: 'ctrl+shift+left',
     command: 'workbench.action.terminal.focusPrevious',
     when: 'terminalFocus && terminalProcessSupported',
   },
   {
     key: 'ctrl+alt+right',
+    mac: 'ctrl+shift+right',
     command: 'workbench.action.terminal.focusNext',
     when: 'terminalFocus && terminalProcessSupported',
   },
@@ -42,11 +44,13 @@ module.exports = [
   },
   {
     key: 'ctrl+shift+j',
+    key: 'cmd+shift+j',
     command: 'editor.action.joinLines',
     when: 'editorTextFocus',
   },
   {
     key: 'ctrl+k shift+w',
+    mac: 'cmd+k shift+w',
     command: 'workbench.action.closeOtherEditors',
   },
   {

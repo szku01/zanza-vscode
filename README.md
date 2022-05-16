@@ -37,13 +37,13 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `ctrl+alt+\` = Single Column Layout / Unsplit All
 - `shift+left` = Collapse Folders (in Explorer sidebar)
 - `ctrl+alt+/` = Toggle Block Comment (from: _alt+shift+a_)
-- `ctrl+alt+left` = Terminal Previous
-- `ctrl+alt+right` = Terminal Next
+- `ctrl+alt+left` // `ctrl+shift+left` = Terminal Previous
+- `ctrl+alt+right` // `ctrl+shift+right` = Terminal Next
 - `alt+insert` = New File (Explorer Sidebar)
 - `shift+alt+insert`: New Folder (Explorer Sidebar)
 - `shift+alt+t` = Wrap with Abbreviation
-- `ctrl+shift+j` = Join Lines
-- `ctrl+k shift+w` = Close All Other Tabs
+- `ctrl+shift+j` // `cmd+shift+j` = Join Lines
+- `ctrl+k shift+w` // `cmd+k shift+w` = Close All Other Tabs
 - `ctrl+alt+t` = Toggle Tabbar Visibility
 - `ctrl+alt+up` = Maximize Terminal Panel (in Terminal Only)
 - `shift+space` = Insert Snippet from List (vscode auto complete can be very slow)
@@ -51,16 +51,16 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 
 ### New
 
-- `ctrl+c` = Copy to Buffer
-- `ctrl+x` = Cut to Buffer
-- `ctrl+shift+v <NUM>` = Paste from Buffer [<NUM>] (NUM:1-2-3-4-5)
-- `ctrl+shift+v`×2 = Show Clipboard Buffer
-- `ctrl+shift+/` = Toggle Line Comment, Move Cursor Down
+- `ctrl+c` // `cmd+c` = Copy to Buffer
+- `ctrl+x` // `cmd+v` = Cut to Buffer
+- `ctrl+shift+v <NUM>` // `cmd+shift+v <NUM>` = Paste from Buffer [<NUM>] (NUM:1-2-3-4-5)
+- `ctrl+shift+v`×2 // `cmd+shift+v`×2 = Show Clipboard Buffer
+- `ctrl+shift+/` // `cmd+alt+/` = Toggle Line Comment, Move Cursor Down
 - `alt+shift+d <NUM>` = Save Bookmark [<NUM>] (NUM:1-2-3-4-|-5-6-7-8); 5-8 is persistent per workspace
 - `alt+d <NUM>` = Load Bookmark [<NUM>]
 - `alt+d`×2 = Load Bookmark from List
 - `alt+shift+d`×2 = Save Bookmark to List
-- `ctrl+shift+backspace`×2 = Greedy Backspace
+- `ctrl+shift+backspace` // `cmd+shift+backspace` = Greedy Backspace
 - `ctrl+f9`= Start Terminal (external)
 - `ctrl+shift+f9`= Start Git Bash (external)
 - `ctrl+alt+p`= Quick Open Selection or Clipboard
