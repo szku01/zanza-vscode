@@ -46,7 +46,7 @@ async function peafowlColor(colorSet: TPeaColors | null) {
 
 export function peafowlColorInitExtension(context: vscode.ExtensionContext) {
   const add = getAddDisposable(context);
-  const reg = vscode.commands.registerTextEditorCommand;
+  const reg = vscode.commands.registerCommand;
   add(reg('zanza.peafowlColorReset', () => peafowlColor(null)));
   add(reg('zanza.peafowlColorDimGray', () => peafowlColor('dimGray')));
   add(reg('zanza.peafowlColorTeal', () => peafowlColor('teal')));
