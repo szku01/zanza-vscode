@@ -17,8 +17,9 @@ async function fromDiffToFile(textEditor: vscode.TextEditor, edit: vscode.TextEd
   // it's much more than "vscode.open" uri, unfortunately I'm not going to replicate that whole thing
   // https://github.com/microsoft/vscode/blob/a10dccc76aaed8d5666796feea2c3c0380970d04/extensions/git/src/commands.ts
   // await vscode.commands.executeCommand('vscode.open', uri);
-  await vscode.commands.executeCommand('workbench.view.explorer'); // show the explorer view
   await vscode.commands.executeCommand('git.openFile'); // let it pick up cursor and selection stuff
+  await vscode.commands.executeCommand('workbench.view.explorer'); // show the explorer view
+  await vscode.commands.executeCommand('workbench.action.focusFirstEditorGroup'); // jump to the editor
 }
 
 // ---
