@@ -16,6 +16,7 @@ const parts = [
   require('./fromDiffToFile'),
   require('./generic'),
   require('./peafowlColor'),
+  require('./sortLines'),
 ];
 
 const activationEvents = [

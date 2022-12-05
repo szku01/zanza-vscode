@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "3.0.6",
+  "version": "4.0.0",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -84,7 +84,9 @@
     "onCommand:zanza.peafowlColorLightGreen",
     "onCommand:zanza.peafowlColorLightSkyBlue",
     "onCommand:zanza.peafowlColorLightPink",
-    "onCommand:zanza.peafowlColorCornsilk"
+    "onCommand:zanza.peafowlColorCornsilk",
+    "onCommand:zanza.sortLinesAsc",
+    "onCommand:zanza.sortLinesDesc"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -294,8 +296,9 @@
       },
       {
         "command": "editor.action.joinLines",
-        "key": "cmd+shift+j",
-        "when": "editorTextFocus"
+        "key": "ctrl+shift+j",
+        "when": "editorTextFocus",
+        "mac": "cmd+shift+j"
       },
       {
         "command": "workbench.action.closeOtherEditors",
@@ -553,6 +556,14 @@
       {
         "command": "zanza.peafowlColorCornsilk",
         "title": "Peafowl Color: Cornsilk (light)"
+      },
+      {
+        "command": "zanza.sortLinesAsc",
+        "title": "Sort All/Selected Ascending, Remove Empty Lines"
+      },
+      {
+        "command": "zanza.sortLinesDesc",
+        "title": "Sort All/Selected Descending, Remove Empty Lines"
       }
     ],
     "menus": {

@@ -14,7 +14,7 @@ Adding a new command:
 - add new command file in _src/_ and import it in _src/extension.ts_
 - add new command in _packageJson/_ AND _packageJson/build.js_
 - change `version` in _package.json_
-- `npm run build`
+- `npm run build` (even before launching the extension dev mode)
 
 ## Known Issues
 
@@ -67,6 +67,7 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `f4`= Close Diff and Open Active File (in diff viewer)
 - `explorer context menu / folder`= Open Folder in New Instance
 - Color status and titlebar with `Peafowl Color: ...` commands (9 dark, 6 light)
+- Sort all or selected lines
 
 ## TODO
 
@@ -77,7 +78,8 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - [x] open folder in new window (context menu)
 - [x] jump to file from diff view and close the diff
 - [x] simple icon theme based on minimal
-- [ ] fix peafowl theme saving if there's no local settings.json
+- [x] sort all lines
+- [x] fix peafowl theme saving if there's no local settings.json
 - [ ] reformat comments
 - [ ] save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
 

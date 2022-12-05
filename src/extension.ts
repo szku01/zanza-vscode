@@ -9,6 +9,7 @@ import { startBashInitExtension } from './startBash';
 import { openFolderNewInstanceInitExtension } from './openFolderNewInstance';
 import { fromDiffToFileInitExtension } from './fromDiffToFile';
 import { peafowlColorInitExtension } from './peafowlColor';
+import { sortLinesInitExtension } from './sortLines';
 
 // will init lazily
 export function activate(context: vscode.ExtensionContext) {
@@ -23,6 +24,7 @@ export function activate(context: vscode.ExtensionContext) {
   openFolderNewInstanceInitExtension(context);
   fromDiffToFileInitExtension(context);
   peafowlColorInitExtension(context);
+  sortLinesInitExtension(context);
 }
 
 export function deactivate() {}

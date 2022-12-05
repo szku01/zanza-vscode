@@ -44,7 +44,7 @@ module.exports = [
   },
   {
     key: 'ctrl+shift+j',
-    key: 'cmd+shift+j',
+    mac: 'cmd+shift+j',
     command: 'editor.action.joinLines',
     when: 'editorTextFocus',
   },
