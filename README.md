@@ -14,7 +14,13 @@ Adding a new command:
 - add new command file in _src/_ and import it in _src/extension.ts_
 - add new command in _packageJson/_ AND _packageJson/build.js_
 - change `version` in _package.json_
+- update vsce `npm install -D vsce@X.Y.Z` (with proper version)
 - `npm run build` (even before launching the extension dev mode)
+
+Adding new icons:
+
+- see svg files in _./icons_
+- edit _./icons/zanza-icon-theme.json_
 
 ## Known Issues
 

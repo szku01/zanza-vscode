@@ -1,0 +1,18 @@
+<svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .text {
+      font-size: 9px;
+      font-family: Arial, Helvetica, sans-serif;
+      fill: #c5c5c5;
+    }
+  </style>
+  <defs>
+    <linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#75507b" />
+      <stop offset="80%" stop-color="#ed028f" />
+    </linearGradient>
+  </defs>
+  <circle fill="url(#grad)" cx="8" cy="8" r="7" stroke="#c5c5c5" />
+  <circle fill="#000" cx="8" cy="8" r="5" opacity="0.2" />
+  <text x="5" y="12" class="text">A</text>
+</svg>
