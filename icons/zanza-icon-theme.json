@@ -97,7 +97,7 @@
     // "component.scss": "_file_scss_comp_dark",
     // "component.ts": "_file_ts_comp_dark",
     "actions.ts": "_file_rxjs_a_dark",
-    "reducers.ts": "_file_rxjs_r_dark",
+    "reducer.ts": "_file_rxjs_r_dark",
     "state.ts": "_file_rxjs_s_dark",
     "selectors.ts": "_file_rxjs_l_dark",
     "effects.ts": "_file_rxjs_fx_dark"
