@@ -68,7 +68,7 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 - `alt+shift+d`×2 = Save Bookmark to List
 - `ctrl+shift+backspace` // `cmd+shift+backspace` = Greedy Backspace
 - `ctrl+f9`= Start Terminal (external)
-- `ctrl+shift+f9`= Start Git Bash (external)
+- `ctrl+shift+f9`= Start Git Bash (external, _git-bash.exe_ must be on the path)
 - `ctrl+alt+p`= Quick Open Selection or Clipboard
 - `f4`= Close Diff and Open Active File (in diff viewer)
 - `explorer context menu / folder`= Open Folder in New Instance
