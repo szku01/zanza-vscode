@@ -24,15 +24,30 @@ function capitalize(string = '') {
 
 // ---
 
-export function kebabCase(string = '') {
-  return words(string.replace(/['\u2019]/g, '')).reduce(
-    (result, word, index) => result + (index ? '-' : '') + word.toLowerCase(),
+export function kebabCase(string = '', concatChar = '-') {
+  return (words(string.replace(/['\u2019]/g, '')) as any).reduce(
+    (result: string, word: string, index: number) => result + (index ? concatChar : '') + word.toLowerCase(),
+    ''
+  );
+}
+
+export function splitToWords(string = '') {
+  return kebabCase(string, ' ');
+}
+
+export function sentenceCase(string = '') {
+  return capitalize(splitToWords(string));
+}
+
+export function sentencePascalCase(string = '') {
+  return (words(string.replace(/['\u2019]/g, '')) as any).reduce(
+    (result: string, word: string, index: number) => result + (index ? ' ' : '') + capitalize(word.toLowerCase()),
     ''
   );
 }
 
 export function camelCase(string = '') {
-  return words(string.replace(/['\u2019]/g, '')).reduce((result, word, index) => {
+  return (words(string.replace(/['\u2019]/g, '')) as any).reduce((result: string, word: string, index: number) => {
     word = word.toLowerCase();
     return result + (index ? capitalize(word) : word);
   }, '');
@@ -43,8 +58,8 @@ export function pascalCase(string = '') {
 }
 
 export function snakeCase(string = '', scream = false) {
-  let result = words(string.replace(/['\u2019]/g, '')).reduce(
-    (result, word, index) => result + (index ? '_' : '') + word.toLowerCase(),
+  let result = (words(string.replace(/['\u2019]/g, '')) as any).reduce(
+    (result: string, word: string, index: number) => result + (index ? '_' : '') + word.toLowerCase(),
     ''
   );
   return scream ? result.toUpperCase() : result;
@@ -67,7 +82,16 @@ export function changeCaseInitExtension(context: vscode.ExtensionContext) {
   const { registerTextEditorCommand } = vscode.commands;
 
   // snake, upper, title, lower - these are already in vscode, but these operate on words separately
-  const map = [camelCase, kebabCase, pascalCase, snakeCase, screamingSnakeCase];
+  const map = [
+    camelCase,
+    kebabCase,
+    pascalCase,
+    snakeCase,
+    screamingSnakeCase,
+    sentenceCase,
+    sentencePascalCase,
+    splitToWords,
+  ];
   map.forEach((fn) => {
     addDisposable(
       registerTextEditorCommand(`zanza.transformTo${pascalCase(fn.name)}`, (textEditor, edit) =>

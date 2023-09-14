@@ -17,6 +17,7 @@ const parts = [
   require('./generic'),
   require('./peafowlColor'),
   require('./sortLines'),
+  require('./multipleCommands'),
 ];
 
 const activationEvents = [

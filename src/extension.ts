@@ -2,14 +2,15 @@ import * as vscode from 'vscode';
 import { bookmarkInitExtension } from './bookmark';
 import { changeCaseInitExtension } from './changeCase';
 import { clipboardBufferInitExtension } from './clipboardBuffer';
-import { openSelectionInitExtension } from './openSelection';
 import { commentDownInitExtension } from './commentDown';
-import { greedySelectInitExtension } from './greedySelect';
-import { startBashInitExtension } from './startBash';
-import { openFolderNewInstanceInitExtension } from './openFolderNewInstance';
 import { fromDiffToFileInitExtension } from './fromDiffToFile';
+import { greedySelectInitExtension } from './greedySelect';
+import { multipleCommandsInitExtension } from './multipleCommands';
+import { openFolderNewInstanceInitExtension } from './openFolderNewInstance';
+import { openSelectionInitExtension } from './openSelection';
 import { peafowlColorInitExtension } from './peafowlColor';
 import { sortLinesInitExtension } from './sortLines';
+import { startBashInitExtension } from './startBash';
 
 // will init lazily
 export function activate(context: vscode.ExtensionContext) {
@@ -25,6 +26,7 @@ export function activate(context: vscode.ExtensionContext) {
   fromDiffToFileInitExtension(context);
   peafowlColorInitExtension(context);
   sortLinesInitExtension(context);
+  multipleCommandsInitExtension(context);
 }
 
 export function deactivate() {}

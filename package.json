@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "4.2.2",
+  "version": "4.4.0",
   "engines": {
     "vscode": "^1.59.0"
   },
@@ -32,12 +32,14 @@
     "onCommand:zanza.saveBookmarkToPicker",
     "onCommand:zanza.flushBookmarks",
     "onCommand:zanza.transformToCamelCase",
-    "onCommand:zanza.transformToCamelCase",
     "onCommand:zanza.transformToKebabCase",
     "onCommand:zanza.transformToPascalCase",
     "onCommand:zanza.transformToSnakeCase",
     "onCommand:zanza.transformToScreamingSnakeCase",
     "onCommand:zanza.transformToConstantCase",
+    "onCommand:zanza.transformToSentenceCase",
+    "onCommand:zanza.transformToSentencePascalCase",
+    "onCommand:zanza.transformToSplitToWords",
     "onCommand:zanza.copyToBuffer",
     "onCommand:zanza.cutToBuffer",
     "onCommand:zanza.pasteFromBuffer1",
@@ -86,7 +88,8 @@
     "onCommand:zanza.peafowlColorLightPink",
     "onCommand:zanza.peafowlColorCornsilk",
     "onCommand:zanza.sortLinesAsc",
-    "onCommand:zanza.sortLinesDesc"
+    "onCommand:zanza.sortLinesDesc",
+    "onCommand:zanza.multiCommandLintFormat"
   ],
   "main": "./out/extension.js",
   "contributes": {
@@ -403,31 +406,39 @@
       },
       {
         "command": "zanza.transformToCamelCase",
-        "title": "Transform Selection to Camel Case"
-      },
-      {
-        "command": "zanza.transformToCamelCase",
-        "title": "Transform Selection to Camel Case"
+        "title": "Transform Selection to Camel Case (fooBar)"
       },
       {
         "command": "zanza.transformToKebabCase",
-        "title": "Transform Selection to Kebab Case"
+        "title": "Transform Selection to Kebab Case (foo-bar)"
       },
       {
         "command": "zanza.transformToPascalCase",
-        "title": "Transform Selection to Pascal Case"
+        "title": "Transform Selection to Pascal Case (FooBar)"
       },
       {
         "command": "zanza.transformToSnakeCase",
-        "title": "Transform Selection to Snake Case Proper"
+        "title": "Transform Selection to Snake Case Proper (foo_bar)"
       },
       {
         "command": "zanza.transformToScreamingSnakeCase",
-        "title": "Transform Selection to Screaming Snake Case"
+        "title": "Transform Selection to Screaming Snake Case (FOO_BAR)"
       },
       {
         "command": "zanza.transformToConstantCase",
-        "title": "Transform Selection to Constant Case"
+        "title": "Transform Selection to Constant Case (FOO_BAR)"
+      },
+      {
+        "command": "zanza.transformToSentenceCase",
+        "title": "Transform Selection to Sentence Case (Foo bar)"
+      },
+      {
+        "command": "zanza.transformToSentencePascalCase",
+        "title": "Transform Selection to Sentence Pascal Case (Foo Bar)"
+      },
+      {
+        "command": "zanza.transformToSplitToWords",
+        "title": "Transform Selection to Split Words (foo bar)"
       },
       {
         "command": "zanza.copyToBuffer",
@@ -564,6 +575,10 @@
       {
         "command": "zanza.sortLinesDesc",
         "title": "Sort All/Selected Descending, Remove Empty Lines"
+      },
+      {
+        "command": "zanza.multiCommandLintFormat",
+        "title": "Multi Command: sort imports, format, lint fix, format"
       }
     ],
     "menus": {
