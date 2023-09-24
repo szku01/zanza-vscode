@@ -5,7 +5,7 @@ import { getAddDisposable } from './utils';
 
 // vscode has a file api these days, but it would need Uri as a param and as long
 // as I'm not working with non-file documents (remotes), I couldn't care less
-async function fileExists(fn: string): Promise<Boolean> {
+async function fileExists(fn: string): Promise<boolean> {
   try {
     await stat(fn);
     return true;
@@ -63,7 +63,7 @@ async function findCovDir(nameOfCovDir: string, fragments: string[]) {
 }
 
 async function openInBrowser(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit): Promise<void> {
-  let uri = textEditor.document.uri;
+  const uri = textEditor.document.uri;
   // Uri for example:
   // "fsPath": "c:\\Users\\szabi\\Projects\\personal\\zanza-vscode\\playground\\dummy.ts",
   // "external": "file:///c%3A/Users/szabi/Projects/personal/zanza-vscode/playground/dummy.ts",
@@ -77,7 +77,7 @@ async function openInBrowser(textEditor: vscode.TextEditor, edit: vscode.TextEdi
 
   // let's go up on the directory chain and find the first "coverage" directory
   // (well, if it's outside the project path then... so it goes)
-  let fsPath = uri.fsPath.replace(/\\/g, '/');
+  const fsPath = uri.fsPath.replace(/\\/g, '/');
   const origFileName = normalizePath(fsPath);
   const fragments = fsPath.split('/');
   fragments.length = fragments.length - 1; // cut away the filename

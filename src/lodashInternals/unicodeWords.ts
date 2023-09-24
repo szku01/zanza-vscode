@@ -61,6 +61,6 @@ const reUnicodeWords = RegExp(
 );
 
 // Splits a Unicode `string` into an array of its words.
-export default function unicodeWords(string: String) {
+export default function unicodeWords(string: string) {
   return string.match(reUnicodeWords);
 }

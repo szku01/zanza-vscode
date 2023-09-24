@@ -17,7 +17,7 @@ export function openFolderNewInstanceInitExtension(context: vscode.ExtensionCont
   addDisposable(
     registerTextEditorCommand('zanza.openFolderNewInstanceFromEditor', (textEditor, edit) => {
       const uri = textEditor.document.uri;
-      const location = uri.scheme + ':' + uri.path.replace(/[^\/]+$/, '');
+      const location = uri.scheme + ':' + uri.path.replace(/[^/]+$/, '');
       open(vscode.Uri.parse(location, true));
     })
   );

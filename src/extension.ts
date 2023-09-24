@@ -31,4 +31,6 @@ export function activate(context: vscode.ExtensionContext) {
   coverageInitExtension(context);
 }
 
-export function deactivate() {}
+export function deactivate() {
+  /* noop */
+}

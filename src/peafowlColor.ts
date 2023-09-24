@@ -17,7 +17,7 @@ async function peafowlColor(colorSet: TPeaColors | null) {
   const location = 'workbench.colorCustomizations';
   const target = vscode.ConfigurationTarget.Workspace;
   const configProxy = await workspace.getConfiguration();
-  let currentConfig = (configProxy.inspect(location)?.workspaceValue ?? {}) as Record<string, string>;
+  const currentConfig = (configProxy.inspect(location)?.workspaceValue ?? {}) as Record<string, string>;
   const colors = peafowlColorDefinitions[colorSet || 'dummy'];
 
   if (!colorSet) {

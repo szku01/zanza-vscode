@@ -1,5 +1,5 @@
-import path = require('path');
-const { spawn } = require('child_process');
+import * as path from 'path';
+import { spawn } from 'child_process';
 import * as vscode from 'vscode';
 import { getAddDisposable } from './utils';
 
@@ -16,7 +16,6 @@ async function startBash(gitBash = false) {
   if (!location && fileName) {
     location = path.dirname(fileName);
   }
-  let proc: any;
   let bin = '';
   let args: string[] = [];
   if (platform === 'win32') {
@@ -36,7 +35,7 @@ async function startBash(gitBash = false) {
     bin = 'gnome-terminal';
     args = location ? [`--working-directory=${location}`] : [];
   }
-  proc = spawn(bin, args);
+  const proc = spawn(bin, args);
   proc.on('error', (error: any) => {
     const missingGitBash = `Failed to start "${bin}"`;
     vscode.window.showErrorMessage(missingGitBash);

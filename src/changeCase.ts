@@ -6,7 +6,7 @@ import unicodeWords from './lodashInternals/unicodeWords';
 const hasUnicodeWord = RegExp.prototype.test.bind(/[a-z][A-Z]|[A-Z]{2}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/);
 
 function asciiWords(s = '') {
-  return s.match(/[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g);
+  return s.match(/[^\x00-\x2f\x3a-\x40\x5b-\x60\x7b-\x7f]+/g); // eslint-disable-line no-control-regex
 }
 
 // Splits `string` into an array of its words.
@@ -58,7 +58,7 @@ export function pascalCase(string = '') {
 }
 
 export function snakeCase(string = '', scream = false) {
-  let result = (words(string.replace(/['\u2019]/g, '')) as any).reduce(
+  const result = (words(string.replace(/['\u2019]/g, '')) as any).reduce(
     (result: string, word: string, index: number) => result + (index ? '_' : '') + word.toLowerCase(),
     ''
   );

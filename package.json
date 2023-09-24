@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -528,6 +528,7 @@
     "build": "node packageJson/build.js && vsce package -o build",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
+    "lint:recommended": "eslint --config=.eslintrc-recommended.json src --ext ts",
     "format": "prettier -w src",
     "test": "prettier -c src && eslint src --ext ts"
   },
