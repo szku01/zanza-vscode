@@ -525,7 +525,7 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "build": "node packageJson/build.js && vsce package -o build",
+    "build": "node scripts/build.js && vsce package -o build",
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts",
     "lint:recommended": "eslint --config=.eslintrc-recommended.json src --ext ts",

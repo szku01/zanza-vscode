@@ -25,6 +25,11 @@ Adding new icons:
 - see svg files in _./icons_
 - edit _./icons/zanza-icon-theme.json_
 
+Misc:
+
+- _./playground_ has some useful situations to test the commands
+- _./inkscape_ contains source svg files (editable by [inkscape](https://inkscape.org/))
+
 ## Known Issues
 
 Most of these are due to known limitations or to avoid hacks, extreme complexities.
