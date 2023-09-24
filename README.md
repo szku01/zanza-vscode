@@ -1,20 +1,21 @@
 # Zanza
 
-Stuff vscode should have by default.
+Stuff vscode should have by default (or I myself need badly and thought it simple enough to implement myself).
 
-No dependencies, no hacks, no wishlists, no magic.
+No dependencies, no wishlists, no magic.
 
-The [list of commands can be found here](./docs/commands.md).
+The current [list of commands can be found here](./docs/commands.md).
 
 ## Development
 
+- `npm i`, `npm run build`
 - `f5` run / launch another vscode for extension development mode
 - `ctrl+r` reload (in another window)
 
 Adding a new command:
 
 - add new command file in _src/_ and import it in _src/extension.ts_
-- add new command in _packageJson/_ AND _packageJson/build.js_
+- add new meta file in _src/_ (like "fooMeta.js") for keyboard, command or menu setup
 - change `version` in _package.json_
 - update vsce `npm install -D @vscode/vsce@X.Y.Z` (with proper version)
 - `npm run build` (even before launching the extension dev mode)
@@ -25,6 +26,8 @@ Adding new icons:
 - edit _./icons/zanza-icon-theme.json_
 
 ## Known Issues
+
+Most of these are due to known limitations or to avoid hacks, extreme complexities.
 
 1. So far all text transforms are done via enumerating/modifying selections,
    meaning text needs to be selected to operate on and inserted text will be selected by default.
@@ -38,6 +41,7 @@ Adding new icons:
 ## Keyboard shortcuts
 
 Shortcuts are set for Windows only (so far) - or at least they are tested there.
+Should I end up at a company where linux/mac is the default, I'll update them.
 
 ### Existing (redefined/added)
 
@@ -79,17 +83,9 @@ Shortcuts are set for Windows only (so far) - or at least they are tested there.
 
 ## TODO
 
-- [x] generate package.json from json fragments
-- [x] persist the bookmarks per workspace
-- [x] greedy backspace (see: jasonlhy.hungry-delete)
-- [x] open file, name from clipboard or selection (see: quickOpen.withPrefill)
-- [x] open folder in new window (context menu)
-- [x] jump to file from diff view and close the diff
-- [x] simple icon theme based on minimal
-- [x] sort all lines
-- [x] fix peafowl theme saving if there's no local settings.json
-- [ ] reformat comments
-- [ ] save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
+- render _commands.md_ as a markdown table
+- reformat comments
+- save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
 
 ## Tips and tricks
 

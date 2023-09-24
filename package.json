@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "4.4.0",
+  "version": "5.0.0",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -152,9 +152,9 @@
         "mac": "cmd+alt+/"
       },
       {
-        "command": "zanza.openSelection",
-        "key": "ctrl+alt+p",
-        "when": "editorTextFocus"
+        "command": "zanza.fromDiffToFile",
+        "key": "f4",
+        "when": "isInDiffEditor"
       },
       {
         "command": "zanza.greedyDeleteLeft",
@@ -163,17 +163,17 @@
         "mac": "cmd+shift+backspace"
       },
       {
+        "command": "zanza.openSelection",
+        "key": "ctrl+alt+p",
+        "when": "editorTextFocus"
+      },
+      {
         "command": "zanza.startGitBash",
         "key": "ctrl+shift+f9"
       },
       {
         "command": "zanza.startTerminal",
         "key": "ctrl+f9"
-      },
-      {
-        "command": "zanza.fromDiffToFile",
-        "key": "f4",
-        "when": "isInDiffEditor"
       },
       {
         "command": "editor.action.deleteLines",
@@ -398,20 +398,20 @@
         "title": "Toggle Line Comment, Move Cursor Down"
       },
       {
-        "command": "zanza.openSelection",
-        "title": "Quick Open Selection or Clipboard"
+        "command": "zanza.coverageOpenInBrowser",
+        "title": "Open Existing Coverage HTML in Browser"
+      },
+      {
+        "command": "zanza.fromDiffToFile",
+        "title": "Close Diff and Go to File"
       },
       {
         "command": "zanza.greedyDeleteLeft",
         "title": "Greedy Delete Left"
       },
       {
-        "command": "zanza.startGitBash",
-        "title": "Start Git Bash Here"
-      },
-      {
-        "command": "zanza.startTerminal",
-        "title": "Start Terminal Here"
+        "command": "zanza.multiCommandLintFormat",
+        "title": "Multi Command: sort imports, format, lint fix, format"
       },
       {
         "command": "zanza.openFolderNewInstance",
@@ -422,8 +422,8 @@
         "title": "Open Folder in New Instance"
       },
       {
-        "command": "zanza.fromDiffToFile",
-        "title": "Close Diff and Go to File"
+        "command": "zanza.openSelection",
+        "title": "Quick Open Selection or Clipboard"
       },
       {
         "command": "zanza.peafowlColorReset",
@@ -498,8 +498,12 @@
         "title": "Sort All/Selected Descending, Remove Empty Lines"
       },
       {
-        "command": "zanza.multiCommandLintFormat",
-        "title": "Multi Command: sort imports, format, lint fix, format"
+        "command": "zanza.startGitBash",
+        "title": "Start Git Bash Here"
+      },
+      {
+        "command": "zanza.startTerminal",
+        "title": "Start Terminal Here"
       }
     ],
     "menus": {

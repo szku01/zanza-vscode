@@ -1,26 +1,23 @@
-// merges all the json-like js file in this directory
+// merges all the json-like ...Meta js files in the src directory
 // and injects them into the main package.json
 // (somewhat less painful than defining everything in the package.json itself)
 // ---------------------------------------------------------------------------
 const fs = require('fs');
 const output = require('../package.json');
-const partsNamed = {
-  bookmark: require('./bookmark'),
-  changeCase: require('./changeCase'),
-  clipboardBuffer: require('./clipboardBuffer'),
-  commentDown: require('./commentDown'),
-  openSelection: require('./openSelection'),
-  greedySelect: require('./greedySelect'),
-  startBash: require('./startBash'),
-  openFolderNewInstance: require('./openFolderNewInstance'),
-  fromDiffToFile: require('./fromDiffToFile'),
-  generic: require('./generic'),
-  peafowlColor: require('./peafowlColor'),
-  sortLines: require('./sortLines'),
-  multipleCommands: require('./multipleCommands'),
-};
+
+console.info('Requiring Meta files from ./src:');
+const partsNamed = fs
+  .readdirSync('./src')
+  .filter((fn) => fn.endsWith('Meta.js'))
+  .reduce((acc, fn) => {
+    console.log(`- ${fn}`);
+    const key = fn.replace(/\.js$/, '').replace(/^_+/, '');
+    acc[key] = require(`../src/${fn}`);
+    return acc;
+  }, {});
 const parts = Object.values(partsNamed);
 
+console.info('Building package.json patch data');
 const activationEvents = [
   // example:
   // "onCommand:zanza.foobar",
@@ -87,6 +84,7 @@ parts.flat().forEach((part) => {
   }
 });
 
+console.info('Patching package.json');
 const save = (name = '') => fs.writeFileSync(name, JSON.stringify(output, null, 2));
 save('package.json.old');
 output.activationEvents = activationEvents;
@@ -96,16 +94,22 @@ output.contributes.menus = menus;
 save('package.json');
 
 // generate toc
+console.info('Generating ./docs/commands.md');
 let lines = ['# Commands'];
 Object.keys(partsNamed).forEach((key) => {
   const commands = partsNamed[key];
+  if (key === 'genericMeta') return; // these are keyboard shortcut definitions for existing vscode commands
   if (!commands.length) return;
-  lines.push(`\n## ${key}\n`);
+  lines.push(`\n## ${key.replace(/Meta$/, '')}\n`);
   commands.forEach((command) => {
     if (command.title && command.command) {
-      lines.push(`- **${command.command}** = ${command.title}`);
+      let text = `- **${command.command}** = ${command.title}`;
+      if (command.description) text += ` (_${command.description}_)`;
+      lines.push(text);
     }
   });
 });
 lines.push(`\n\n(generated at ${new Date().toISOString().substring(0, 10)})\n`);
 fs.writeFileSync('docs/commands.md', lines.join('\n'));
+
+console.info('Done.');

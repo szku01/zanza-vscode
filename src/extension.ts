@@ -11,6 +11,7 @@ import { openSelectionInitExtension } from './openSelection';
 import { peafowlColorInitExtension } from './peafowlColor';
 import { sortLinesInitExtension } from './sortLines';
 import { startBashInitExtension } from './startBash';
+import { coverageInitExtension } from './coverage';
 
 // will init lazily
 export function activate(context: vscode.ExtensionContext) {
@@ -27,6 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
   peafowlColorInitExtension(context);
   sortLinesInitExtension(context);
   multipleCommandsInitExtension(context);
+  coverageInitExtension(context);
 }
 
 export function deactivate() {}

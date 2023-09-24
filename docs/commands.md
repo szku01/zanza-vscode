@@ -49,30 +49,30 @@
 
 - **zanza.commentDown** = Toggle Line Comment, Move Cursor Down
 
-## openSelection
+## coverage
 
-- **zanza.openSelection** = Quick Open Selection or Clipboard
+- **zanza.coverageOpenInBrowser** = Open Existing Coverage HTML in Browser (_tries to open an istanbul coverage report for the currently open file, hopefully works with the default angular and react setups_)
+
+## fromDiffToFile
+
+- **zanza.fromDiffToFile** = Close Diff and Go to File
 
 ## greedySelect
 
 - **zanza.greedyDeleteLeft** = Greedy Delete Left
 
-## startBash
+## multipleCommands
 
-- **zanza.startGitBash** = Start Git Bash Here
-- **zanza.startTerminal** = Start Terminal Here
+- **zanza.multiCommandLintFormat** = Multi Command: sort imports, format, lint fix, format
 
 ## openFolderNewInstance
 
 - **zanza.openFolderNewInstance** = Open Folder in New Instance
 - **zanza.openFolderNewInstanceFromEditor** = Open Folder in New Instance
 
-## fromDiffToFile
+## openSelection
 
-- **zanza.fromDiffToFile** = Close Diff and Go to File
-
-## generic
-
+- **zanza.openSelection** = Quick Open Selection or Clipboard
 
 ## peafowlColor
 
@@ -98,9 +98,10 @@
 - **zanza.sortLinesAsc** = Sort All/Selected Ascending, Remove Empty Lines
 - **zanza.sortLinesDesc** = Sort All/Selected Descending, Remove Empty Lines
 
-## multipleCommands
+## startBash
 
-- **zanza.multiCommandLintFormat** = Multi Command: sort imports, format, lint fix, format
+- **zanza.startGitBash** = Start Git Bash Here (_git-bash.exe must be on the path_)
+- **zanza.startTerminal** = Start Terminal Here (_launches cmd.exe / Terminal / gnome-terminal_)
 
 
 (generated at 2023-09-24)
