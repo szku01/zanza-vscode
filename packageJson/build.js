@@ -4,21 +4,22 @@
 // ---------------------------------------------------------------------------
 const fs = require('fs');
 const output = require('../package.json');
-const parts = [
-  require('./bookmark'),
-  require('./changeCase'),
-  require('./clipboardBuffer'),
-  require('./commentDown'),
-  require('./openSelection'),
-  require('./greedySelect'),
-  require('./startBash'),
-  require('./openFolderNewInstance'),
-  require('./fromDiffToFile'),
-  require('./generic'),
-  require('./peafowlColor'),
-  require('./sortLines'),
-  require('./multipleCommands'),
-];
+const partsNamed = {
+  bookmark: require('./bookmark'),
+  changeCase: require('./changeCase'),
+  clipboardBuffer: require('./clipboardBuffer'),
+  commentDown: require('./commentDown'),
+  openSelection: require('./openSelection'),
+  greedySelect: require('./greedySelect'),
+  startBash: require('./startBash'),
+  openFolderNewInstance: require('./openFolderNewInstance'),
+  fromDiffToFile: require('./fromDiffToFile'),
+  generic: require('./generic'),
+  peafowlColor: require('./peafowlColor'),
+  sortLines: require('./sortLines'),
+  multipleCommands: require('./multipleCommands'),
+};
+const parts = Object.values(partsNamed);
 
 const activationEvents = [
   // example:
@@ -51,8 +52,10 @@ const menus = {
 };
 
 parts.flat().forEach((part) => {
-  // activation event
-  activationEvents.push(`onCommand:${part.command}`);
+  // activation event (deprecated)
+  // with vscode 1.75+ these are automated on the ide level
+  // `activationEvents.push(`onCommand:${part.command}`);`
+
   // keybinding
   if (part.key) {
     const keybinding = {
@@ -91,3 +94,18 @@ output.contributes.keybindings = keybindings;
 output.contributes.commands = commands;
 output.contributes.menus = menus;
 save('package.json');
+
+// generate toc
+let lines = ['# Commands'];
+Object.keys(partsNamed).forEach((key) => {
+  const commands = partsNamed[key];
+  if (!commands.length) return;
+  lines.push(`\n## ${key}\n`);
+  commands.forEach((command) => {
+    if (command.title && command.command) {
+      lines.push(`- **${command.command}** = ${command.title}`);
+    }
+  });
+});
+lines.push(`\n\n(generated at ${new Date().toISOString().substring(0, 10)})\n`);
+fs.writeFileSync('docs/commands.md', lines.join('\n'));
