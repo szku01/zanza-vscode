@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "engines": {
     "vscode": "^1.75.0"
   },

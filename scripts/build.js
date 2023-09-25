@@ -85,7 +85,7 @@ parts.flat().forEach((part) => {
 });
 
 console.info('Patching package.json');
-const save = (name = '') => fs.writeFileSync(name, JSON.stringify(output, null, 2));
+const save = (name = '') => fs.writeFileSync(name, JSON.stringify(output, null, 2) + '\n', 'utf-8');
 save('package.json.old');
 output.activationEvents = activationEvents;
 output.contributes.keybindings = keybindings;

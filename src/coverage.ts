@@ -44,6 +44,11 @@ function withoutLastPathFragment(loc: string) {
   return parts.slice(0, parts.length - 1).join('/');
 }
 
+function withoutFirstPathFragment(loc: string) {
+  const parts = splitPathToFragments(loc);
+  return parts.slice(1).join('/');
+}
+
 /**
  * Tries to find the /coverage dir; accepts a path split by '/' for fragments
  * ("c:/foo/bar" -> ['c:', 'foo', 'bar'])
@@ -119,10 +124,15 @@ async function openInBrowser(textEditor: vscode.TextEditor, edit: vscode.TextEdi
 
   const origFnWithoutPrjRoot = origFileName.replace(maybeRoot, '').replace(/^\//, '');
   const pathA =
-    [foundDir, getParentPathFragment(foundDir), origFnWithoutPrjRoot.replace(srcDirName + '/', '')].join('/') + '.html';
-  const pathB = [foundDir, 'lcov-report', origFnWithoutPrjRoot].join('/') + '.html';
-  const covHtmls = [pathA, pathB];
+    [foundDir, getParentPathFragment(foundDir), origFnWithoutPrjRoot.replace(srcDirName + '/', '')];
+  const pathB = [foundDir, 'lcov-report', origFnWithoutPrjRoot];
+  let covHtmlsArr = [pathA, pathB];
 
+  // and now we have a third, where src is NOT added right after the /coverage/
+  const pathC = [foundDir, withoutFirstPathFragment(origFnWithoutPrjRoot)];
+  covHtmlsArr.push(pathC);
+
+  const covHtmls = covHtmlsArr.map(parts => parts.join('/') + '.html');
   let foundHtml = '';
   for (let idx = 0; idx < covHtmls.length; idx++) {
     const html = covHtmls[idx];
