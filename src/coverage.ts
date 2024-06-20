@@ -122,7 +122,7 @@ async function openInBrowser(textEditor: vscode.TextEditor, edit: vscode.TextEdi
   // Angular coverage first root is the name of the parent (then it is followed by parent (project?) name);
   // React coverage first root is "lcov-report" (then it is followed by the src dir name).
 
-  const origFnWithoutPrjRoot = origFileName.replace(maybeRoot, '').replace(/^\//, '');
+  const origFnWithoutPrjRoot = origFileName.replace(/\.spec\./, '.').replace(maybeRoot, '').replace(/^\//, '');
   const pathA =
     [foundDir, getParentPathFragment(foundDir), origFnWithoutPrjRoot.replace(srcDirName + '/', '')];
   const pathB = [foundDir, 'lcov-report', origFnWithoutPrjRoot];
