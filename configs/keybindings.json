@@ -1,0 +1,24 @@
+[
+  {
+    "key": "ctrl+shift+w",
+    "command": "-workbench.action.closeWindow"
+  },
+  {
+    "key": "ctrl+alt+a",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "shift+alt+f5",
+    "command": "merge.goToNextUnhandledConflict",
+    "when": "editorFocus"
+  },
+  // extensions
+  {
+    "key": "ctrl+shift+g shift+c",
+    "command": "gitlens.diffWithRevisionFrom"
+  },
+  {
+    "key": "ctrl+alt+f",
+    "command": "zanza.multiCommandLintFormat"
+  }
+]
