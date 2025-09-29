@@ -4,7 +4,7 @@
   "description": "simple things I miss from vscode",
   "publisher": "szkrd",
   "repository": "https://github.com/szkrd/zanza-vscode",
-  "version": "5.0.4",
+  "version": "5.2.0",
   "engines": {
     "vscode": "^1.75.0"
   },
@@ -410,6 +410,10 @@
         "title": "Greedy Delete Left"
       },
       {
+        "command": "zanza.moveNamespaceImports",
+        "title": "Tries to move namespace imports after the real imports"
+      },
+      {
         "command": "zanza.multiCommandLintFormat",
         "title": "Multi Command: sort imports, format, lint fix, format"
       },
@@ -538,7 +542,7 @@
     "@types/vscode": "1.59.0",
     "@typescript-eslint/eslint-plugin": "4.26.0",
     "@typescript-eslint/parser": "4.26.0",
-    "@vscode/vsce": "2.29.0",
+    "@vscode/vsce": "3.6.0",
     "eslint": "7.27.0",
     "glob": "7.1.7",
     "prettier": "2.3.2",

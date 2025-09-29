@@ -61,6 +61,10 @@
 
 - **zanza.greedyDeleteLeft** = Greedy Delete Left
 
+## moveNamespaceImports
+
+- **zanza.moveNamespaceImports** = Tries to move namespace imports after the real imports
+
 ## multipleCommands
 
 - **zanza.multiCommandLintFormat** = Multi Command: sort imports, format, lint fix, format
@@ -104,4 +108,4 @@
 - **zanza.startTerminal** = Start Terminal Here (_launches cmd.exe / Terminal / gnome-terminal_)
 
 
-(generated at 2024-05-09)
+(generated at 2025-09-29)
