@@ -1,9 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es6",
+    "target": "ES2021",
     "outDir": "out",
-    "lib": ["es6"],
+    "lib": ["ES2021"],
+    "types": ["node"],
     "sourceMap": true,
     "rootDir": "src",
     "strict": true /* enable all strict type-checking options */

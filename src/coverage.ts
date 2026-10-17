@@ -122,9 +122,11 @@ async function openInBrowser(textEditor: vscode.TextEditor, edit: vscode.TextEdi
   // Angular coverage first root is the name of the parent (then it is followed by parent (project?) name);
   // React coverage first root is "lcov-report" (then it is followed by the src dir name).
 
-  const origFnWithoutPrjRoot = origFileName.replace(/\.spec\./, '.').replace(maybeRoot, '').replace(/^\//, '');
-  const pathA =
-    [foundDir, getParentPathFragment(foundDir), origFnWithoutPrjRoot.replace(srcDirName + '/', '')];
+  const origFnWithoutPrjRoot = origFileName
+    .replace(/\.spec\./, '.')
+    .replace(maybeRoot, '')
+    .replace(/^\//, '');
+  const pathA = [foundDir, getParentPathFragment(foundDir), origFnWithoutPrjRoot.replace(srcDirName + '/', '')];
   const pathB = [foundDir, 'lcov-report', origFnWithoutPrjRoot];
   let covHtmlsArr = [pathA, pathB];
 
@@ -132,7 +134,7 @@ async function openInBrowser(textEditor: vscode.TextEditor, edit: vscode.TextEdi
   const pathC = [foundDir, withoutFirstPathFragment(origFnWithoutPrjRoot)];
   covHtmlsArr.push(pathC);
 
-  const covHtmls = covHtmlsArr.map(parts => parts.join('/') + '.html');
+  const covHtmls = covHtmlsArr.map((parts) => parts.join('/') + '.html');
   let foundHtml = '';
   for (let idx = 0; idx < covHtmls.length; idx++) {
     const html = covHtmls[idx];

@@ -14,11 +14,12 @@ The current [list of commands can be found here](./docs/commands.md).
 
 Adding a new command:
 
-- add new command file in _src/_ and import it in _src/extension.ts_
-- add new meta file in _src/_ (like "fooMeta.js") for keyboard, command or menu setup
-- change `version` in _package.json_
-- update vsce `npm install -D @vscode/vsce@X.Y.Z` (with proper version)
-- `npm run build` (even before launching the extension dev mode)
+1. add new command file in _src/_ (like "foo.ts") and import it in _src/extension.ts_
+  (be careful with `registerCommand` vs `registerTextEditorCommand` when reusing from another command)
+2. add new meta file in _src/_ (like "fooMeta.js") for keyboard, command or menu setup
+3. change `version` in _package.json_
+4. update vsce `npm install -D @vscode/vsce@X.Y.Z` (with proper version) if it was outdated
+5. `npm run build` (even before launching the extension dev mode)
 
 Adding new icons:
 

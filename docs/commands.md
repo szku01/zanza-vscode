@@ -49,6 +49,12 @@
 
 - **zanza.commentDown** = Toggle Line Comment, Move Cursor Down
 
+## copyOpenFilePaths
+
+- **zanza.copyOpenFilePaths** = Copy Open File Paths to Clipboard
+- **zanza.openFilesFromClipboard** = Open Files from Clipboard
+- **zanza.openFilesFromCurrentFile** = Open Files from Current Opened File (selection or all)
+
 ## coverage
 
 - **zanza.coverageOpenInBrowser** = Open Existing Coverage HTML in Browser (_tries to open an istanbul coverage report for the currently open file, hopefully works with the default angular and react setups_)
@@ -104,4 +110,4 @@
 - **zanza.startTerminal** = Start Terminal Here (_launches cmd.exe / Terminal / gnome-terminal_)
 
 
-(generated at 2024-05-09)
+(generated at 2026-10-17)
