@@ -51,7 +51,7 @@ async function showClipboardBuffer(textEditor: vscode.TextEditor, edit: vscode.T
   }
   const sel = await vscode.window.showQuickPick(
     buffer.map((text, i) => `[${i + 1}]: ${text}`),
-    { canPickMany: false }
+    { canPickMany: false },
   );
   if (!sel) {
     return;
@@ -78,15 +78,15 @@ export function clipboardBufferInitExtension(context: vscode.ExtensionContext) {
     addDisposable(
       vscode.commands.registerTextEditorCommand(
         `zanza.pasteFromBuffer${i}`,
-        (textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit) => pasteFromBuffer(textEditor, edit, i)
-      )
+        (textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit) => pasteFromBuffer(textEditor, edit, i),
+      ),
     );
   }
 
   addDisposable(
     vscode.commands.registerTextEditorCommand(
       'zanza.showClipboardBuffer',
-      (textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit) => showClipboardBuffer(textEditor, edit)
-    )
+      (textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit) => showClipboardBuffer(textEditor, edit),
+    ),
   );
 }

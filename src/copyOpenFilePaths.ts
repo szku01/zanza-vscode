@@ -62,8 +62,8 @@ function resolveFilePath(filename: string, baseDirectories: string[]): string | 
   const candidates = cleaned.startsWith('file://') // Support absolute paths and file:// URIs.
     ? [vscode.Uri.parse(cleaned).fsPath]
     : path.isAbsolute(cleaned)
-    ? [path.resolve(cleaned)]
-    : baseDirectories.map((base) => path.resolve(base, cleaned));
+      ? [path.resolve(cleaned)]
+      : baseDirectories.map((base) => path.resolve(base, cleaned));
   for (const candidate of candidates) {
     if (isExcluded(candidate)) continue;
     if (isFile(candidate)) return candidate;
@@ -93,7 +93,7 @@ async function openFiles(lines: string[], baseDirectories: string[]): Promise<vo
     }
   }
   vscode.window.showInformationMessage(
-    `Opened ${opened.size} file(s). Skipped ${skipped} invalid, missing, or excluded line(s).`
+    `Opened ${opened.size} file(s). Skipped ${skipped} invalid, missing, or excluded line(s).`,
   );
 }
 

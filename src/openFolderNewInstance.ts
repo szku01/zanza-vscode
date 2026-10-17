@@ -19,7 +19,7 @@ export function openFolderNewInstanceInitExtension(context: vscode.ExtensionCont
       const uri = textEditor.document.uri;
       const location = uri.scheme + ':' + uri.path.replace(/[^/]+$/, '');
       open(vscode.Uri.parse(location, true));
-    })
+    }),
   );
 
   context.subscriptions.push(action);

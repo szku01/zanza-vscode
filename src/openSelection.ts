@@ -23,6 +23,6 @@ export function openSelectionInitExtension(context: vscode.ExtensionContext) {
   const { registerTextEditorCommand } = vscode.commands;
 
   addDisposable(
-    registerTextEditorCommand('zanza.openSelection', (textEditor, edit) => openSelection(textEditor, edit))
+    registerTextEditorCommand('zanza.openSelection', (textEditor, edit) => openSelection(textEditor, edit)),
   );
 }

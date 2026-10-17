@@ -15,6 +15,6 @@ export function multipleCommandsInitExtension(context: vscode.ExtensionContext) 
   const { registerTextEditorCommand } = vscode.commands;
 
   addDisposable(
-    registerTextEditorCommand('zanza.multiCommandLintFormat', (textEditor, edit) => lintFormat(textEditor, edit))
+    registerTextEditorCommand('zanza.multiCommandLintFormat', (textEditor, edit) => lintFormat(textEditor, edit)),
   );
 }

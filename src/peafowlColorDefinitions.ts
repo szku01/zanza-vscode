@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 interface IPeafowlColorDefinition {
   'statusBar.background': string;
   'statusBar.foreground': string;

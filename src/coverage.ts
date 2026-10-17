@@ -158,6 +158,6 @@ export function coverageInitExtension(context: vscode.ExtensionContext) {
   const { registerTextEditorCommand } = vscode.commands;
 
   addDisposable(
-    registerTextEditorCommand('zanza.coverageOpenInBrowser', (textEditor, edit) => openInBrowser(textEditor, edit))
+    registerTextEditorCommand('zanza.coverageOpenInBrowser', (textEditor, edit) => openInBrowser(textEditor, edit)),
   );
 }

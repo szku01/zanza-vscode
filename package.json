@@ -547,12 +547,11 @@
   "devDependencies": {
     "@types/node": "22.20.5",
     "@types/vscode": "1.140.0",
-    "@typescript-eslint/eslint-plugin": "4.26.0",
-    "@typescript-eslint/parser": "4.26.0",
+    "@typescript-eslint/eslint-plugin": "8.71.2",
+    "@typescript-eslint/parser": "8.71.2",
     "@vscode/vsce": "4.0.0",
-    "eslint": "7.27.0",
-    "prettier": "2.3.2",
-    "ts-node": "10.2.1",
+    "eslint": "8.57.0",
+    "prettier": "3.9.10",
     "typescript": "5.9.3"
   }
 }
