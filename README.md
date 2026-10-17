@@ -87,12 +87,6 @@ Should I end up at a company where linux/mac is the default, I'll update them.
 - Color status and titlebar with `Peafowl Color: ...` commands (9 dark, 6 light)
 - Sort all or selected lines
 
-## TODO
-
-- render _commands.md_ as a markdown table
-- reformat comments
-- save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
-
 ## Tips and tricks
 
 ### Terminal colors and theme modifications
@@ -104,18 +98,10 @@ themes:
 
 ```jsonc
 "workbench.colorCustomizations": {
-    "editorIndentGuide.activeBackground": "#ffffff70",
-    "editorIndentGuide.background": "#ffffff15",
     // theme overrides
-    "[Solarized Dark]": {
-      "editor.background": "#001419"
-    },
-    "[Tomorrow Night Blue]": {
-      "editor.background": "#000d1e"
-    },
-    "[Default Dark+]": {
-      "editor.background": "#181818"
-    },
+    "[Solarized Dark]": { "editor.background": "#001419" },
+    "[Tomorrow Night Blue]": { "editor.background": "#000d1e" },
+    "[Default Dark+]": {"editor.background": "#181818" },
     // terminal (tango colors)
     "terminal.background": "#0d0d0d",
     "terminal.foreground": "#d3d7cf",
