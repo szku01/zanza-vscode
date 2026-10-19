@@ -114,8 +114,4 @@
 - **zanza.startTerminal** = Start Terminal Here (_launches cmd.exe / Terminal / gnome-terminal_)
 
 
-<<<<<<< HEAD
-(generated at 2025-09-29)
-=======
 (generated at 2026-10-17)
->>>>>>> upstream/main
