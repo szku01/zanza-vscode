@@ -128,7 +128,7 @@ export function bookmarkInitExtension(context: vscode.ExtensionContext) {
   restoreBookmarks();
   for (let i = 1; i <= buffer.length; i++) {
     addDisposable(
-      registerTextEditorCommand(`zanza.saveBookmark${i}`, (textEditor, edit) => saveBookmark(textEditor, edit, i))
+      registerTextEditorCommand(`zanza.saveBookmark${i}`, (textEditor, edit) => saveBookmark(textEditor, edit, i)),
     );
     addDisposable(registerCommand(`zanza.loadBookmark${i}`, () => loadBookmark(i)));
   }

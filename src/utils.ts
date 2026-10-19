@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-types */
 import { Disposable, ExtensionContext } from 'vscode';
 
 export const getAddDisposable = (context: ExtensionContext) => (dis: Disposable) => context.subscriptions.push(dis);

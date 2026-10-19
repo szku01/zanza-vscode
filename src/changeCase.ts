@@ -27,7 +27,7 @@ function capitalize(string = '') {
 export function kebabCase(string = '', concatChar = '-') {
   return (words(string.replace(/['\u2019]/g, '')) as any).reduce(
     (result: string, word: string, index: number) => result + (index ? concatChar : '') + word.toLowerCase(),
-    ''
+    '',
   );
 }
 
@@ -42,7 +42,7 @@ export function sentenceCase(string = '') {
 export function sentencePascalCase(string = '') {
   return (words(string.replace(/['\u2019]/g, '')) as any).reduce(
     (result: string, word: string, index: number) => result + (index ? ' ' : '') + capitalize(word.toLowerCase()),
-    ''
+    '',
   );
 }
 
@@ -60,7 +60,7 @@ export function pascalCase(string = '') {
 export function snakeCase(string = '', scream = false) {
   const result = (words(string.replace(/['\u2019]/g, '')) as any).reduce(
     (result: string, word: string, index: number) => result + (index ? '_' : '') + word.toLowerCase(),
-    ''
+    '',
   );
   return scream ? result.toUpperCase() : result;
 }
@@ -95,14 +95,14 @@ export function changeCaseInitExtension(context: vscode.ExtensionContext) {
   map.forEach((fn) => {
     addDisposable(
       registerTextEditorCommand(`zanza.transformTo${pascalCase(fn.name)}`, (textEditor, edit) =>
-        transformToCase(textEditor, edit, fn)
-      )
+        transformToCase(textEditor, edit, fn),
+      ),
     );
   });
   // alias constant case to screaming snake
   addDisposable(
     registerTextEditorCommand('zanza.transformToConstantCase', (textEditor, edit) =>
-      transformToCase(textEditor, edit, screamingSnakeCase)
-    )
+      transformToCase(textEditor, edit, screamingSnakeCase),
+    ),
   );
 }

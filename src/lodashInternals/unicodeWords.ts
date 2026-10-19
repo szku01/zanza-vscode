@@ -57,7 +57,7 @@ const reUnicodeWords = RegExp(
     `${rsDigit}+`,
     rsEmoji,
   ].join('|'),
-  'g'
+  'g',
 );
 
 // Splits a Unicode `string` into an array of its words.

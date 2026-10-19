@@ -25,6 +25,13 @@ async function lintFormatAlternate(textEditor: vscode.TextEditor, edit: vscode.T
 export function multipleCommandsInitExtension(context: vscode.ExtensionContext) {
   const add = getAddDisposable(context);
   const { registerTextEditorCommand } = vscode.commands;
+<<<<<<< HEAD
   add(registerTextEditorCommand('zanza.multiCommandLintFormat', (textEditor, edit) => lintFormat(textEditor, edit)));
   add(registerTextEditorCommand('zanza.multiCommandLintFormatAlternate', (textEditor, edit) => lintFormatAlternate(textEditor, edit)));
+=======
+
+  addDisposable(
+    registerTextEditorCommand('zanza.multiCommandLintFormat', (textEditor, edit) => lintFormat(textEditor, edit)),
+  );
+>>>>>>> upstream/main
 }

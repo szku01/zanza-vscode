@@ -14,11 +14,12 @@ The current [list of commands can be found here](./docs/commands.md).
 
 Adding a new command:
 
-- add new command file in _src/_ and import it in _src/extension.ts_
-- add new meta file in _src/_ (like "fooMeta.js") for keyboard, command or menu setup
-- change `version` in _package.json_
-- update vsce `npm install -D @vscode/vsce@X.Y.Z` (with proper version)
-- `npm run build` (even before launching the extension dev mode)
+1. add new command file in _src/_ (like "foo.ts") and import it in _src/extension.ts_
+  (be careful with `registerCommand` vs `registerTextEditorCommand` when reusing from another command)
+2. add new meta file in _src/_ (like "fooMeta.js") for keyboard, command or menu setup
+3. change `version` in _package.json_
+4. update vsce `npm install -D @vscode/vsce@X.Y.Z` (with proper version) if it was outdated
+5. `npm run build` (even before launching the extension dev mode)
 
 Adding new icons:
 
@@ -86,12 +87,6 @@ Should I end up at a company where linux/mac is the default, I'll update them.
 - Color status and titlebar with `Peafowl Color: ...` commands (9 dark, 6 light)
 - Sort all or selected lines
 
-## TODO
-
-- render _commands.md_ as a markdown table
-- reformat comments
-- save list of opened files / reopen them ([API missing](https://github.com/Microsoft/vscode/issues/15178))
-
 ## Tips and tricks
 
 ### Terminal colors and theme modifications
@@ -103,18 +98,10 @@ themes:
 
 ```jsonc
 "workbench.colorCustomizations": {
-    "editorIndentGuide.activeBackground": "#ffffff70",
-    "editorIndentGuide.background": "#ffffff15",
     // theme overrides
-    "[Solarized Dark]": {
-      "editor.background": "#001419"
-    },
-    "[Tomorrow Night Blue]": {
-      "editor.background": "#000d1e"
-    },
-    "[Default Dark+]": {
-      "editor.background": "#181818"
-    },
+    "[Solarized Dark]": { "editor.background": "#001419" },
+    "[Tomorrow Night Blue]": { "editor.background": "#000d1e" },
+    "[Default Dark+]": {"editor.background": "#181818" },
     // terminal (tango colors)
     "terminal.background": "#0d0d0d",
     "terminal.foreground": "#d3d7cf",

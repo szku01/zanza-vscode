@@ -18,9 +18,9 @@ export function greedySelectInitExtension(context: vscode.ExtensionContext) {
   const addDisposable = getAddDisposable(context);
   const { registerTextEditorCommand } = vscode.commands;
   addDisposable(
-    registerTextEditorCommand('zanza.greedySelectLeft', (textEditor, edit) => greedySelectLeft(textEditor, edit))
+    registerTextEditorCommand('zanza.greedySelectLeft', (textEditor, edit) => greedySelectLeft(textEditor, edit)),
   );
   addDisposable(
-    registerTextEditorCommand('zanza.greedyDeleteLeft', (textEditor, edit) => greedyDeleteLeft(textEditor, edit))
+    registerTextEditorCommand('zanza.greedyDeleteLeft', (textEditor, edit) => greedyDeleteLeft(textEditor, edit)),
   );
 }
